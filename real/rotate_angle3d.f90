@@ -193,3 +193,25 @@ module type_angle3d
     end function cos2sin
 
 end module type_angle3d
+
+program main 
+   use type_angle3d
+   
+   implicit none
+   type(angle3d) :: angle1, angle2, angle_final
+   
+   ! 初始化两个角度
+   angle1 = angle3d_deg(45.0, 30.0)
+   angle2 = angle3d_deg(45.0, 60.0)
+   
+   ! 输出初始角度
+   print*, "Initial Angle 1 (Theta, Phi): ", rad2deg * acos(angle1%cost), rad2deg * acos(angle1%cosp)
+   print*, "Initial Angle 2 (Theta, Phi): ", rad2deg * acos(angle2%cost), rad2deg * acos(angle2%cosp)
+   
+   ! 将角度1和角度2进行合并
+   call rotate_angle3d(angle1, angle2, angle_final)
+   
+   ! 输出合并后的角度
+   print*, "Final Angle (Theta, Phi): ", rad2deg * acos(angle_final%cost), rad2deg * acos(angle_final%cosp)
+
+end program main

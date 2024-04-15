@@ -8,7 +8,7 @@ program main
     call quadratic_pascal_reduced_(4.0,3.0,x,y)  ! x = -1, y = -3
     ! x = x / (x + 1.0)
     ! y = y / (y + 1.0)
-    print *,x,y
+   !  print *,x,y
  end program main
 
 ! 求解帕斯卡二次方程的根
@@ -25,11 +25,13 @@ program main
        x1 = q / a
        x2 = c / q
     else if(delta < 0.) then
-       x1 = -huge(x1)
-       x2 = -huge(x2)
+      write(*,*) "none"
+      !  x1 = huge(x1)
+      !  x2 = huge(x2)
     else
        x1 = - 2.0 * c / b
-       x2 = -huge(x2)
+       write(*,*) "none"
+      !  x2 = -huge(x2)
     end if
   end subroutine quadratic_pascal_
 
@@ -47,10 +49,12 @@ program main
        x1 = q
        x2 = c / q
     else if(delta < 0.) then
-       x1 = -huge(x1)
-       x2 = -huge(x2)
+      write(*,*) "none"
+      !  x1 = -huge(x1)
+      !  x2 = -huge(x2)
     else
        x1 = - 2.0 * c / b
-       x2 = -huge(x2)
+       write(*,*) "none"
+      !  x2 = -huge(x2)
     end if
   end subroutine quadratic_pascal_reduced_

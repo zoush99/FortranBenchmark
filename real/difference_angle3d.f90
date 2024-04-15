@@ -208,3 +208,23 @@ end if
 end function cos2sin
 
 end module type_angle3d
+
+program main
+   use type_angle3d
+   
+   implicit none
+   type(angle3d) :: angle_coord, angle_final, angle_local
+   
+   ! 初始化坐标角度和最终角度
+   angle_coord = angle3d_deg(30.0, 45.0)
+   angle_final = angle3d_deg(60.0, 45.0)
+   
+   ! 执行函数 difference_angle3d
+   call difference_angle3d(angle_coord, angle_final, angle_local)
+   
+   ! 输出结果
+   print*, "Initial Angle (Theta, Phi): ", rad2deg * acos(angle_coord%cost), rad2deg * acos(angle_coord%cosp)
+   print*, "Final Angle (Theta, Phi): ", rad2deg * acos(angle_final%cost), rad2deg * acos(angle_final%cosp)
+   print*, "Local Angle (Theta, Phi): ", rad2deg * acos(angle_local%cost), rad2deg * acos(angle_local%cosp)
+
+end program main
