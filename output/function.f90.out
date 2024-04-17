@@ -1,0 +1,25 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 0.008 sec
+ikos-pp      : 0.005 sec
+
+# Summary:
+Total number of checks                : 16
+Total number of unreachable checks    : 0
+Total number of safe checks           : 15
+Total number of definite unsafe checks: 1
+Total number of warnings              : 0
+
+The program is definitely UNSAFE
+
+# Results
+file,function,line,column,statement_id,contexts,status,check,message
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/function.f90,cap_,15,1,12,./MAIN_@26:1:5,error,division-by-zero,division by zero

@@ -1,0 +1,32 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 0.055 sec
+ikos-pp      : 0.006 sec
+
+# Summary:
+Total number of checks                : 230
+Total number of unreachable checks    : 0
+Total number of safe checks           : 222
+Total number of definite unsafe checks: 0
+Total number of warnings              : 8
+
+The program is potentially UNSAFE
+
+# Results
+file,function,line,column,statement_id,contexts,status,check,message
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/bisect.f90,numerical_f1_,43,1,42,./MAIN_@65:1:39 | ./MAIN_@65:1:49 | ./MAIN_@69:1:70/numerical_bisect_@22:1:88 | ./MAIN_@69:1:70/numerical_bisect_@23:1:91,warning,uninitialized-variable,expression '*((float*)__arg0)' might be uninitialized
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/bisect.f90,numerical_f1_,43,1,45,./MAIN_@65:1:39 | ./MAIN_@65:1:49 | ./MAIN_@69:1:70/numerical_bisect_@22:1:88 | ./MAIN_@69:1:70/numerical_bisect_@23:1:91,warning,uninitialized-variable,expression '*((float*)__arg0)' might be uninitialized
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/bisect.f90,numerical_bisect_,17,1,75,./MAIN_@69:1:70 | ./MAIN_@81:1:202,warning,uninitialized-variable,expression '*((float*)__arg0)' might be uninitialized
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/bisect.f90,numerical_bisect_,17,1,75,./MAIN_@69:1:70 | ./MAIN_@81:1:202,warning,uninitialized-variable,expression '*((float*)__arg1)' might be uninitialized
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/bisect.f90,numerical_bisect_,31,1,101,./MAIN_@69:1:70 | ./MAIN_@81:1:202,warning,uninitialized-variable,expression '*((float*)__arg1)' might be uninitialized
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/bisect.f90,numerical_bisect_,27,1,112,./MAIN_@69:1:70 | ./MAIN_@81:1:202,warning,uninitialized-variable,expression '*((float*)__arg0)' might be uninitialized
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/bisect.f90,numerical_f2_,50,1,174,./MAIN_@77:1:171 | ./MAIN_@77:1:181 | ./MAIN_@81:1:202/numerical_bisect_@22:1:88 | ./MAIN_@81:1:202/numerical_bisect_@23:1:91,warning,uninitialized-variable,expression '*((float*)__arg0)' might be uninitialized
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/bisect.f90,numerical_f2_,50,1,177,./MAIN_@77:1:171 | ./MAIN_@77:1:181 | ./MAIN_@81:1:202/numerical_bisect_@22:1:88 | ./MAIN_@81:1:202/numerical_bisect_@23:1:91,warning,uninitialized-variable,expression '*((float*)__arg0)' might be uninitialized

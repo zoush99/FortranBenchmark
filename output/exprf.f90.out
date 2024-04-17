@@ -1,0 +1,31 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 0.015 sec
+ikos-pp      : 0.006 sec
+
+# Summary:
+Total number of checks                : 41
+Total number of unreachable checks    : 0
+Total number of safe checks           : 34
+Total number of definite unsafe checks: 1
+Total number of warnings              : 6
+
+The program is definitely UNSAFE
+
+# Results
+file,function,line,column,statement_id,contexts,status,check,message
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/exprf.f90,func_,41,1,12,./MAIN_@25:1:7,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/exprf.f90,func_,47,1,17,./MAIN_@25:1:7,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/exprf.f90,func_,53,1,22,./MAIN_@25:1:7,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/exprf.f90,func_,59,1,24,./MAIN_@25:1:7,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/exprf.f90,func_,59,1,27,./MAIN_@25:1:7,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/exprf.f90,func_,59,1,29,./MAIN_@25:1:7,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/exprf.f90,func_,64,1,35,./MAIN_@25:1:7,error,division-by-zero,division by zero

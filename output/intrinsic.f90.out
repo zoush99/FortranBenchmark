@@ -1,0 +1,28 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 0.007 sec
+ikos-pp      : 0.005 sec
+
+# Summary:
+Total number of checks                : 9
+Total number of unreachable checks    : 3
+Total number of safe checks           : 5
+Total number of definite unsafe checks: 1
+Total number of warnings              : 0
+
+The program is definitely UNSAFE
+
+# Results
+file,function,line,column,statement_id,contexts,status,check,message
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/intrinsic.f90,MAIN_,5,1,5,.,error,function-call,"invalid function call, pointer '(void(int64_t*)*)&execfunc_' points to function 'execfunc_', which has a mismatching type"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/intrinsic.f90,MAIN_,6,1,6,.,unreachable,unreachable,code is dead
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/intrinsic.f90,MAIN_,8,1,8,.,unreachable,unreachable,code is dead
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/intrinsic.f90,MAIN_,9,1,10,.,unreachable,unreachable,code is dead

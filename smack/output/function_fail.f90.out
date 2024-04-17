@@ -1,0 +1,34 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 0.011 sec
+ikos-pp      : 0.005 sec
+
+# Summary:
+Total number of checks                : 47
+Total number of unreachable checks    : 8
+Total number of safe checks           : 37
+Total number of definite unsafe checks: 0
+Total number of warnings              : 2
+
+The program is potentially UNSAFE
+
+# Results
+file,function,line,column,statement_id,contexts,status,check,message
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/smack/function_fail.f90,cap_,8,1,6,./MAIN_@24:1:4,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/smack/function_fail.f90,cap_,8,1,6,./MAIN_@25:1:26,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/smack/function_fail.f90,MAIN_,25,1,29,.,unreachable,unreachable,code is dead
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/smack/function_fail.f90,MAIN_,25,1,31,.,unreachable,unreachable,code is dead
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/smack/function_fail.f90,MAIN_,25,1,33,.,unreachable,unreachable,code is dead
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/smack/function_fail.f90,MAIN_,25,1,35,.,unreachable,unreachable,code is dead
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/smack/function_fail.f90,MAIN_,29,1,43,.,unreachable,unreachable,code is dead
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/smack/function_fail.f90,MAIN_,29,1,45,.,unreachable,unreachable,code is dead
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/smack/function_fail.f90,MAIN_,29,1,47,.,unreachable,unreachable,code is dead
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/smack/function_fail.f90,MAIN_,29,1,49,.,unreachable,unreachable,code is dead
