@@ -8,18 +8,17 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 0.008 sec
+ikos-analyzer: 0.080 sec
 ikos-pp      : 0.005 sec
 
 # Summary:
-Total number of checks                : 28
+Total number of checks                : 29
 Total number of unreachable checks    : 0
-Total number of safe checks           : 27
+Total number of safe checks           : 29
 Total number of definite unsafe checks: 0
-Total number of warnings              : 1
+Total number of warnings              : 0
 
-The program is potentially UNSAFE
+The program is SAFE
 
 # Results
 file,function,line,column,statement_id,contexts,status,check,message
-/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/smack/inout.f90,addfive_,6,1,7,./MAIN_@12:1:4,warning,signed-int-overflow,possible signed integer overflow

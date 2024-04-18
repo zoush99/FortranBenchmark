@@ -1,0 +1,33 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 0.082 sec
+ikos-pp      : 0.005 sec
+
+# Summary:
+Total number of checks                : 25
+Total number of unreachable checks    : 4
+Total number of safe checks           : 16
+Total number of definite unsafe checks: 0
+Total number of warnings              : 5
+
+The program is potentially UNSAFE
+
+# Results
+file,function,line,column,statement_id,contexts,status,check,message
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/intent_out.f90,MAIN_,12,1,3,.,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/intent_out.f90,MAIN_,18,1,4,.,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/intent_out.f90,MAIN_,18,1,7,.,unreachable,unreachable,code is dead
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/intent_out.f90,MAIN_,18,1,9,.,unreachable,unreachable,code is dead
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/intent_out.f90,MAIN_,18,1,11,.,unreachable,unreachable,code is dead
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/intent_out.f90,MAIN_,18,1,13,.,unreachable,unreachable,code is dead
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/intent_out.f90,incr_,23,1,17,./MAIN_@14:1:15,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/intent_out.f90,incr_,24,1,19,./MAIN_@14:1:15,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/intent_out.f90,incr_,24,1,22,./MAIN_@14:1:15,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"

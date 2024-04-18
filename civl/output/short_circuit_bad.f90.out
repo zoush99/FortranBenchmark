@@ -1,0 +1,22 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace.
+Stack dump:
+0.	Program arguments: /home/zou/Documents/f-ikos/install/bin/ikos-analyzer -a=shc,fca,pcmp,prover,sio,poa,uva,uio,dbz,dca,watch,boa,upa,dfa,nullity,dbg -d=apron-ppl-polyhedra -entry-points=MAIN_ -globals-init=skip-big-arrays -proc=inter -j=1 -widening-strategy=widen -widening-delay=1 -widening-period=1 -narrowing-strategy=meet -narrowing-iterations=2 -allow-dbg-mismatch -display-checks=no -display-inv=no -log=info -progress=auto /tmp/ikos-yryq_o1j/short_circuit_bad.f90.pp.bc -o output.db
+ #0 0x000055a11799f7b1 llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) (/home/zou/Documents/f-ikos/install/bin/ikos-analyzer+0x7397b1)
+ #1 0x000055a11799d4fe llvm::sys::RunSignalHandlers() (/home/zou/Documents/f-ikos/install/bin/ikos-analyzer+0x7374fe)
+ #2 0x000055a11799fceb SignalHandler(int) Signals.cpp.o:0:0
+ #3 0x00007fd4c513a420 __restore_rt (/lib/x86_64-linux-gnu/libpthread.so.0+0x14420)
+ #4 0x000055a1177516c9 ikos::frontend::import::TypeWithDebugInfoImporter::translate_array_di_type(llvm::DICompositeType*, llvm::Type*) (/home/zou/Documents/f-ikos/install/bin/ikos-analyzer+0x4eb6c9)
+ #5 0x000055a1177511b5 ikos::frontend::import::TypeWithDebugInfoImporter::translate_composite_di_type(llvm::DICompositeType*, llvm::Type*) (/home/zou/Documents/f-ikos/install/bin/ikos-analyzer+0x4eb1b5)
+ #6 0x000055a1177515d4 ikos::frontend::import::TypeWithDebugInfoImporter::translate_type(llvm::Type*, llvm::DIType*) (/home/zou/Documents/f-ikos/install/bin/ikos-analyzer+0x4eb5d4)
+ #7 0x000055a117752866 ikos::frontend::import::TypeWithDebugInfoImporter::translate_subroutine_di_type(llvm::DISubroutineType*, llvm::Type*) (/home/zou/Documents/f-ikos/install/bin/ikos-analyzer+0x4ec866)
+ #8 0x000055a11775399e ikos::frontend::import::TypeImporter::translate_function_type(llvm::Function*, llvm::DISubroutineType*) (/home/zou/Documents/f-ikos/install/bin/ikos-analyzer+0x4ed99e)
+ #9 0x000055a1177540a3 ikos::frontend::import::BundleImporter::translate_function_di(llvm::Function*, llvm::DISubprogram*) (/home/zou/Documents/f-ikos/install/bin/ikos-analyzer+0x4ee0a3)
+#10 0x000055a117756829 ikos::frontend::import::BundleImporter::translate_function(llvm::Function*) (/home/zou/Documents/f-ikos/install/bin/ikos-analyzer+0x4f0829)
+#11 0x000055a1177463d3 ikos::frontend::import::Importer::import(llvm::Module&, ikos::ar::Flags<ikos::frontend::import::Importer::ImportOption>) (/home/zou/Documents/f-ikos/install/bin/ikos-analyzer+0x4e03d3)
+#12 0x000055a11732f9e5 main (/home/zou/Documents/f-ikos/install/bin/ikos-analyzer+0xc99e5)
+#13 0x00007fd4c4c0c083 __libc_start_main /build/glibc-wuryBv/glibc-2.31/csu/../csu/libc-start.c:342:3
+#14 0x000055a117334b9e _start (/home/zou/Documents/f-ikos/install/bin/ikos-analyzer+0xceb9e)
+ikos: error: exited with signal SIGSEGV

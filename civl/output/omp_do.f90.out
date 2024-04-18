@@ -1,0 +1,5 @@
+F90-F-0004-Unable to open MODULE file omp_lib.mod (omp_do.f90: 2)
+F90/x86-64 Linux Flang - 1.5 2017-05-01: compilation aborted
+[*] Running ikos preprocessor
+ikos-pp: omp_do.f90.ll: error: Could not open input file: No such file or directory
+ikos: error while preprocessing llvm bitcode, abort.

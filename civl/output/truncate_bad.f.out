@@ -8,13 +8,13 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 0.008 sec
-ikos-pp      : 0.005 sec
+ikos-analyzer: 0.044 sec
+ikos-pp      : 0.006 sec
 
 # Summary:
-Total number of checks                : 23
+Total number of checks                : 21
 Total number of unreachable checks    : 0
-Total number of safe checks           : 23
+Total number of safe checks           : 21
 Total number of definite unsafe checks: 0
 Total number of warnings              : 0
 

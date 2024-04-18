@@ -1,0 +1,10 @@
+F90-W-0006-Input file empty (tempCodeRunnerFile.f90)
+F90/x86-64 Linux Flang - 1.5 2017-05-01: compilation completed with warnings
+F90-W-0006-Input file empty (tempCodeRunnerFile.f90)
+F90-W-0006-Input file empty (tempCodeRunnerFile.f90)
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+ikos-analyzer: /tmp/ikos-e697_hf0/tempCodeRunnerFile.f90.pp.bc: warning: llvm bitcode has no debug information
+[*] Translating LLVM bitcode to AR
+ikos-analyzer: /tmp/ikos-e697_hf0/tempCodeRunnerFile.f90.pp.bc: error: could not find function 'MAIN_'
+ikos: error: a run-time error occurred

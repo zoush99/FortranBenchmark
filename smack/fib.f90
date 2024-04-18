@@ -17,15 +17,17 @@ end if
 end function
 
 program main
+  ! call assert
   implicit none
   integer :: fib
   !print *, fib(5) == 5
   !print *, fib(6) == 8 
   integer :: z
   z = fib(2)
+  ! call assert(fib(5)==5)
+  ! call assert(fib(6)==8)
   !$CVL $assert(fib(5) == 5)
   !$CVL $assert(fib(6) == 8)
-  if (.not.(z > 18)) write(*,*) "assert error"  ! reachable
   if (.not.(fib(5) == 5)) write(*,*) "assert error"  ! unreachable
   if (.not.(fib(6) == 8)) write(*,*) "assert error"  ! unreachable
 end program main

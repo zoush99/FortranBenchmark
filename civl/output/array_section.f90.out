@@ -1,0 +1,46 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 0.786 sec
+ikos-pp      : 0.006 sec
+
+# Summary:
+Total number of checks                : 92
+Total number of unreachable checks    : 7
+Total number of safe checks           : 70
+Total number of definite unsafe checks: 5
+Total number of warnings              : 10
+
+The program is definitely UNSAFE
+
+# Results
+file,function,line,column,statement_id,contexts,status,check,message
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/array_section.f90,MAIN_,8,1,3,.,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/array_section.f90,MAIN_,11,1,15,.,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/array_section.f90,MAIN_,14,1,29,.,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/array_section.f90,MAIN_,14,1,32,.,warning,pointer-overflow,pointer arithmetic might overflow
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/array_section.f90,MAIN_,14,1,34,.,error,pointer-overflow,pointer arithmetic overflow
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/array_section.f90,MAIN_,14,1,35,.,error,buffer-overflow,"buffer overflow, pointer '&((int32_t*)(&((int8_t*)(&tmp$r_358))[-8]))[({L.LB1_371: 1, L.LB1_374: (...) + 1}) + ({L.LB1_434: 1, L.LB1_435: (...) + 1})]' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of local variable 'tmp$r_358' of size 8 bytes"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/array_section.f90,MAIN_,14,1,35,.,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/array_section.f90,subr_,26,1,48,./MAIN_@14:1:46,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/array_section.f90,subr_,27,1,54,./MAIN_@14:1:46,warning,pointer-overflow,pointer arithmetic might overflow
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/array_section.f90,subr_,27,1,56,./MAIN_@14:1:46,error,pointer-overflow,pointer arithmetic overflow
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/array_section.f90,subr_,27,1,57,./MAIN_@14:1:46,error,buffer-overflow,"buffer overflow, pointer '&((int32_t*)(&((int8_t*)__arg1)[-4]))[(int64_t)({L.LB2_344: 1, L.LB2_337: (...) + 1})]' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of local variable 'tmp$r_358' of size 8 bytes"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/array_section.f90,subr_,27,1,57,./MAIN_@14:1:46,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/array_section.f90,MAIN_,14,1,74,.,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/array_section.f90,MAIN_,14,1,81,.,error,uninitialized-variable,"expression '((int32_t*)(&tmp$r_358))[({L.LB1_377: 0, L.LB1_380: (...) + 1}) + (((({L.LB1_436: -2, L.LB1_437: (...) + 4}) + 2) + (((({L.LB1_436: -2, L.LB1_437: (...) + 4}) + 2) >> ((int64_t)1)) >> ((int64_t)62))) >> ((int64_t)2))]' is uninitialized"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/array_section.f90,MAIN_,14,1,81,.,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/array_section.f90,MAIN_,14,1,84,.,unreachable,unreachable,code is dead
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/array_section.f90,MAIN_,15,1,86,.,unreachable,unreachable,code is dead
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/array_section.f90,MAIN_,18,1,92,.,unreachable,unreachable,code is dead
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/array_section.f90,MAIN_,18,1,94,.,unreachable,unreachable,code is dead
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/array_section.f90,MAIN_,18,1,96,.,unreachable,unreachable,code is dead
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/array_section.f90,MAIN_,18,1,98,.,unreachable,unreachable,code is dead
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/array_section.f90,MAIN_,20,1,99,.,unreachable,unreachable,code is dead

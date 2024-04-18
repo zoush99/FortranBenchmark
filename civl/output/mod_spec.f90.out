@@ -8,7 +8,7 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 0.008 sec
+ikos-analyzer: 0.024 sec
 ikos-pp      : 0.005 sec
 
 # Summary:
@@ -22,7 +22,7 @@ The program is SAFE
 
 # Results
 file,function,line,column,statement_id,contexts,status,check,message
-/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/smack/compute.f90,MAIN_,10,1,6,.,unreachable,unreachable,code is dead
-/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/smack/compute.f90,MAIN_,10,1,8,.,unreachable,unreachable,code is dead
-/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/smack/compute.f90,MAIN_,10,1,10,.,unreachable,unreachable,code is dead
-/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/smack/compute.f90,MAIN_,10,1,12,.,unreachable,unreachable,code is dead
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/mod_spec.f90,MAIN_,18,1,6,.,unreachable,unreachable,code is dead
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/mod_spec.f90,MAIN_,18,1,8,.,unreachable,unreachable,code is dead
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/mod_spec.f90,MAIN_,18,1,10,.,unreachable,unreachable,code is dead
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/mod_spec.f90,MAIN_,18,1,12,.,unreachable,unreachable,code is dead

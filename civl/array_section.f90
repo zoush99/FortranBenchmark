@@ -1,4 +1,7 @@
+! @expect error
+
 program array_section
+  ! use smack
   integer :: A(-1:1,-2:2)
   integer :: i, j, m, n
   
@@ -10,8 +13,9 @@ program array_section
   end do
   call subr(n, A(0:0, -2:2:4))
   m = A(0,-2) + A(0,2)
-!$CVL $assert(m .EQ. 0);
-  if(m==0) write(*,*) "assert error"
+  ! call assert(m .NE. 0)
+!$CVL $assert(m .NE. 0);
+  if(.not.(m/=0)) write(*,*) "assert error" ! reachable/error
 
 end program array_section
 

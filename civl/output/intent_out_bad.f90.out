@@ -1,0 +1,28 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 0.112 sec
+ikos-pp      : 0.005 sec
+
+# Summary:
+Total number of checks                : 32
+Total number of unreachable checks    : 0
+Total number of safe checks           : 28
+Total number of definite unsafe checks: 0
+Total number of warnings              : 4
+
+The program is potentially UNSAFE
+
+# Results
+file,function,line,column,statement_id,contexts,status,check,message
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/intent_out_bad.f90,MAIN_,12,1,3,.,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/intent_out_bad.f90,MAIN_,18,1,4,.,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/intent_out_bad.f90,incr_,23,1,23,./MAIN_@14:1:21,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"
+/home/zou/Documents/f-ikos/benchmark/FortranProByzou/f-ikos/Fortran95/civl/intent_out_bad.f90,incr_,23,1,26,./MAIN_@14:1:21,warning,unaligned-pointer,"memory access might be unaligned, access requires 4 bytes alignment"

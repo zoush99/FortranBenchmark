@@ -1,10 +1,13 @@
 ! @expect error
 
 program hello
+  ! use smack
   implicit none
-  !$CVL $assert(.FALSE.)
   logical :: a,b
   a = .true.
   b = .false.
-  if(.not.(a .neqv. b)) write(*,*) "asssert error" ! unreachable
+  ! call assert(.FALSE.)
+  !$CVL $assert(.FALSE.)
+  if(.not.(b)) write(*,*) "asssert error" ! reachable/error
+  ! if(.not.(a .neqv. b)) write(*,*) "asssert error" ! unreachable
 end
