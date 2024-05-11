@@ -202,7 +202,7 @@ program main
    
    ! 初始化两个角度
    angle1 = angle3d_deg(45.0, 30.0)
-   angle2 = angle3d_deg(45.0, 60.0)
+   angle2 = angle3d_deg(45.0, 30.0)
    
    ! 输出初始角度
    print*, "Initial Angle 1 (Theta, Phi): ", rad2deg * acos(angle1%cost), rad2deg * acos(angle1%cosp)

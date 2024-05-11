@@ -1,0 +1,27 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 0.074 sec
+ikos-pp      : 0.011 sec
+
+# Summary:
+Total number of checks                : 31
+Total number of unreachable checks    : 0
+Total number of safe checks           : 30
+Total number of definite unsafe checks: 0
+Total number of warnings              : 1
+
+The program is potentially UNSAFE
+
+# Results
+smack/inout_fail.f90: In function 'MAIN_':
+smack/inout_fail.f90:14:1: warning: possible signed integer overflow
+  y = x + 5
+^

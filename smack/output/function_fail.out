@@ -1,0 +1,55 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 0.116 sec
+ikos-pp      : 0.012 sec
+
+# Summary:
+Total number of checks                : 45
+Total number of unreachable checks    : 8
+Total number of safe checks           : 37
+Total number of definite unsafe checks: 0
+Total number of warnings              : 0
+
+The program is SAFE
+
+# Results
+smack/function_fail.f90: In function 'MAIN_':
+smack/function_fail.f90:30:1: unreachable: code is dead
+  if (.not.(cap(15) == 10)) write(*,*) "assert error"  ! unreachable
+^
+smack/function_fail.f90: In function 'MAIN_':
+smack/function_fail.f90:30:1: unreachable: code is dead
+  if (.not.(cap(15) == 10)) write(*,*) "assert error"  ! unreachable
+^
+smack/function_fail.f90: In function 'MAIN_':
+smack/function_fail.f90:30:1: unreachable: code is dead
+  if (.not.(cap(15) == 10)) write(*,*) "assert error"  ! unreachable
+^
+smack/function_fail.f90: In function 'MAIN_':
+smack/function_fail.f90:30:1: unreachable: code is dead
+  if (.not.(cap(15) == 10)) write(*,*) "assert error"  ! unreachable
+^
+smack/function_fail.f90: In function 'MAIN_':
+smack/function_fail.f90:34:1: unreachable: code is dead
+  if (.not.(cap(x) <= 10)) write(*,*) "assert error"  ! unreachable
+^
+smack/function_fail.f90: In function 'MAIN_':
+smack/function_fail.f90:34:1: unreachable: code is dead
+  if (.not.(cap(x) <= 10)) write(*,*) "assert error"  ! unreachable
+^
+smack/function_fail.f90: In function 'MAIN_':
+smack/function_fail.f90:34:1: unreachable: code is dead
+  if (.not.(cap(x) <= 10)) write(*,*) "assert error"  ! unreachable
+^
+smack/function_fail.f90: In function 'MAIN_':
+smack/function_fail.f90:34:1: unreachable: code is dead
+  if (.not.(cap(x) <= 10)) write(*,*) "assert error"  ! unreachable
+^

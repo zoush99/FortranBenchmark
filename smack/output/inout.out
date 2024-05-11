@@ -1,0 +1,43 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 0.041 sec
+ikos-pp      : 0.010 sec
+
+# Summary:
+Total number of checks                : 22
+Total number of unreachable checks    : 4
+Total number of safe checks           : 17
+Total number of definite unsafe checks: 0
+Total number of warnings              : 1
+
+The program is potentially UNSAFE
+
+# Results
+smack/inout.f90: In function 'MAIN_':
+smack/inout.f90:14:1: warning: possible signed integer overflow
+  y = x + 5
+^
+smack/inout.f90: In function 'MAIN_':
+smack/inout.f90:18:1: unreachable: code is dead
+  if (.not.(x == y)) write(*,*) "assert error"  ! unreachable
+^
+smack/inout.f90: In function 'MAIN_':
+smack/inout.f90:18:1: unreachable: code is dead
+  if (.not.(x == y)) write(*,*) "assert error"  ! unreachable
+^
+smack/inout.f90: In function 'MAIN_':
+smack/inout.f90:18:1: unreachable: code is dead
+  if (.not.(x == y)) write(*,*) "assert error"  ! unreachable
+^
+smack/inout.f90: In function 'MAIN_':
+smack/inout.f90:18:1: unreachable: code is dead
+  if (.not.(x == y)) write(*,*) "assert error"  ! unreachable
+^

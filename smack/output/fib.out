@@ -1,0 +1,55 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 0.166 sec
+ikos-pp      : 0.005 sec
+
+# Summary:
+Total number of checks                : 69
+Total number of unreachable checks    : 0
+Total number of safe checks           : 61
+Total number of definite unsafe checks: 0
+Total number of warnings              : 8
+
+The program is potentially UNSAFE
+
+# Results
+smack/fib.f90: In function 'fib_':
+smack/fib.f90:10:1: warning: expression '*((int32_t*)__arg0)' might be uninitialized
+if (n <= 0) then
+^
+smack/fib.f90: In function 'fib_':
+smack/fib.f90:10:1: warning: expression '*((int32_t*)__arg0)' might be uninitialized
+if (n <= 0) then
+^
+smack/fib.f90: In function 'fib_':
+smack/fib.f90:12:1: warning: expression '*((int32_t*)__arg0)' might be uninitialized
+else if (n == 1) then
+^
+smack/fib.f90: In function 'fib_':
+smack/fib.f90:12:1: warning: expression '*((int32_t*)__arg0)' might be uninitialized
+else if (n == 1) then
+^
+smack/fib.f90: In function 'fib_':
+smack/fib.f90:15:1: warning: expression '*((int32_t*)__arg0)' might be uninitialized
+  result_fib = fib(n - 1) + fib(n - 2)
+^
+smack/fib.f90: In function 'fib_':
+smack/fib.f90:15:1: warning: expression '*((int32_t*)__arg0)' might be uninitialized
+  result_fib = fib(n - 1) + fib(n - 2)
+^
+smack/fib.f90: In function 'fib_':
+smack/fib.f90:15:1: warning: possible signed integer underflow
+  result_fib = fib(n - 1) + fib(n - 2)
+^
+smack/fib.f90: In function 'fib_':
+smack/fib.f90:15:1: warning: possible signed integer overflow
+  result_fib = fib(n - 1) + fib(n - 2)
+^
