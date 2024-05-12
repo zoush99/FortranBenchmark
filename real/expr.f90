@@ -1,3 +1,4 @@
+
 ! compute func(X)=A*X^2+B*X+C
 real function func(x,a,b,c)
 implicit none
