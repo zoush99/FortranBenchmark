@@ -1,0 +1,47 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 0.050 sec
+ikos-pp      : 0.005 sec
+
+# Summary:
+Total number of checks                : 132
+Total number of unreachable checks    : 0
+Total number of safe checks           : 126
+Total number of definite unsafe checks: 6
+Total number of warnings              : 0
+
+The program is definitely UNSAFE
+
+# Results
+div.f90: In function 'divf1_':
+div.f90:38:1: error: division by zero
+  div_err = first / (first - second)
+^
+div.f90: In function 'divf2_':
+div.f90:50:1: error: division by zero
+  div_err = first / (first - second)
+^
+div.f90: In function 'divf3_':
+div.f90:62:1: error: division by zero
+  div_err = first / (2 * first - second)
+^
+div.f90: In function 'divs1_':
+div.f90:72:1: error: division by zero
+  div_err = first / (first - second)
+^
+div.f90: In function 'divs2_':
+div.f90:84:1: error: division by zero
+  div_err = first / (2 * first - second)
+^
+div.f90: In function 'divs4_':
+div.f90:109:1: error: division by zero
+  div_err = first / (first - second)
+^

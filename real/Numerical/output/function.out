@@ -1,0 +1,31 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 0.081 sec
+ikos-pp      : 0.005 sec
+
+# Summary:
+Total number of checks                : 73
+Total number of unreachable checks    : 0
+Total number of safe checks           : 71
+Total number of definite unsafe checks: 2
+Total number of warnings              : 0
+
+The program is definitely UNSAFE
+
+# Results
+function.f90: In function 'cap_':
+function.f90:13:1: error: division by zero
+  y = y / (y - 13.0)
+^
+function.f90: In function 'showcommon_':
+function.f90:26:1: error: division by zero
+c = d / c
+^

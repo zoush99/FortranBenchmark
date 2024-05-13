@@ -1,0 +1,39 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 1.418 sec
+ikos-pp      : 0.011 sec
+
+# Summary:
+Total number of checks                : 120
+Total number of unreachable checks    : 2
+Total number of safe checks           : 116
+Total number of definite unsafe checks: 2
+Total number of warnings              : 0
+
+The program is definitely UNSAFE
+
+# Results
+04regulaFalsi.f: In function 'MAIN_':
+04regulaFalsi.f:23:1: error: expression '{L.LB1_403: undefined, L.LB1_371: f_((int64_t*)&c_331)}' is uninitialized
+            FA = FC
+^
+04regulaFalsi.f: In function 'MAIN_':
+04regulaFalsi.f:26:1: error: expression '{L.LB1_403: undefined, L.LB1_371: f_((int64_t*)&c_331)}' is uninitialized
+            FB = FC
+^
+04regulaFalsi.f: In function 'MAIN_':
+04regulaFalsi.f:28:1: unreachable: code is dead
+          C = APPROX(A, FA, B ,FB)
+^
+04regulaFalsi.f: In function 'MAIN_':
+04regulaFalsi.f:30:1: unreachable: code is dead
+          D = FA*FC
+^

@@ -1,0 +1,39 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 5.000 sec
+ikos-pp      : 0.012 sec
+
+# Summary:
+Total number of checks                : 118
+Total number of unreachable checks    : 0
+Total number of safe checks           : 114
+Total number of definite unsafe checks: 3
+Total number of warnings              : 1
+
+The program is definitely UNSAFE
+
+# Results
+Guide08/test_swap_arrays.f08: In function 'swap_module_swap_integers_':
+Guide08/test_swap_arrays.f08:26:1: error: buffer overflow, pointer '(int32_t*)__arg1' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of global variable '.STATICS4' of size 24 bytes
+        a = b
+^
+Guide08/test_swap_arrays.f08: In function 'swap_module_swap_integers_':
+Guide08/test_swap_arrays.f08:27:1: error: buffer overflow, pointer '(int32_t*)__arg1' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of global variable '.STATICS4' of size 24 bytes
+        b = temp
+^
+Guide08/test_swap_arrays.f08: In function 'MAIN_':
+Guide08/test_swap_arrays.f08:45:1: error: pointer arithmetic overflow
+    call swap(i, j)
+^
+Guide08/test_swap_arrays.f08: In function 'MAIN_':
+Guide08/test_swap_arrays.f08:45:1: warning: pointer arithmetic might overflow
+    call swap(i, j)
+^

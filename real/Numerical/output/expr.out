@@ -1,0 +1,31 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 0.031 sec
+ikos-pp      : 0.006 sec
+
+# Summary:
+Total number of checks                : 77
+Total number of unreachable checks    : 0
+Total number of safe checks           : 75
+Total number of definite unsafe checks: 2
+Total number of warnings              : 0
+
+The program is definitely UNSAFE
+
+# Results
+expr.f90: In function 'func_':
+expr.f90:36:1: error: division by zero
+func = sum / (2 * y - z)  ! error
+^
+expr.f90: In function 'funcs_':
+expr.f90:76:1: error: division by zero
+x = sum / (2 * y - z)  ! error
+^
