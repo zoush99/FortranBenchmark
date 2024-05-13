@@ -1,0 +1,31 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 0.173 sec
+ikos-pp      : 0.006 sec
+
+# Summary:
+Total number of checks                : 31
+Total number of unreachable checks    : 0
+Total number of safe checks           : 29
+Total number of definite unsafe checks: 0
+Total number of warnings              : 2
+
+The program is potentially UNSAFE
+
+# Results
+FORTRAN4RESEARCHERS/Sin.f90: In function 'MAIN_':
+FORTRAN4RESEARCHERS/Sin.f90:19:1: warning: expression '(int32_t)((((1.0E+2) - (3.0E+0)) + (2.0E+0)) / (2.0E+0))' might be uninitialized
+  DO i = 3, max_iter, 2
+^
+FORTRAN4RESEARCHERS/Sin.f90: In function 'MAIN_':
+FORTRAN4RESEARCHERS/Sin.f90:19:1: warning: expression '(int32_t)((((1.0E+2) - (3.0E+0)) + (2.0E+0)) / (2.0E+0))' might be uninitialized
+  DO i = 3, max_iter, 2
+^

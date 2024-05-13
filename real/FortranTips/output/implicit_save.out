@@ -1,0 +1,51 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 0.320 sec
+ikos-pp      : 0.006 sec
+
+# Summary:
+Total number of checks                : 73
+Total number of unreachable checks    : 0
+Total number of safe checks           : 66
+Total number of definite unsafe checks: 0
+Total number of warnings              : 7
+
+The program is potentially UNSAFE
+
+# Results
+integer/implicit_save.f90: In function 'save_mod_bad_factorial_':
+integer/implicit_save.f90:19:1: warning: expression '*((int32_t*)(&.STATICS3))' might be uninitialized
+   i = i*j
+^
+integer/implicit_save.f90: In function 'save_mod_bad_factorial_':
+integer/implicit_save.f90:19:1: warning: possible signed integer underflow (2 <= left <= 3)
+   i = i*j
+^
+integer/implicit_save.f90: In function 'save_mod_bad_factorial_':
+integer/implicit_save.f90:19:1: warning: possible signed integer underflow (-2147483642 <= left <= 3)
+   i = i*j
+^
+integer/implicit_save.f90: In function 'save_mod_bad_factorial_':
+integer/implicit_save.f90:19:1: warning: possible signed integer overflow (2 <= left <= 3)
+   i = i*j
+^
+integer/implicit_save.f90: In function 'save_mod_bad_factorial_':
+integer/implicit_save.f90:19:1: warning: possible signed integer overflow (-2147483642 <= left <= 3)
+   i = i*j
+^
+integer/implicit_save.f90: In function 'save_mod_factorial_':
+integer/implicit_save.f90:30:1: warning: possible signed integer underflow (-2147483642 <= left <= 3)
+   i = i*j
+^
+integer/implicit_save.f90: In function 'save_mod_factorial_':
+integer/implicit_save.f90:30:1: warning: possible signed integer overflow (-2147483642 <= left <= 3)
+   i = i*j
+^

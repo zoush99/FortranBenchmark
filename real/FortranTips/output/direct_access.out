@@ -1,0 +1,83 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 5.242 sec
+ikos-pp      : 0.005 sec
+
+# Summary:
+Total number of checks                : 202
+Total number of unreachable checks    : 0
+Total number of safe checks           : 187
+Total number of definite unsafe checks: 6
+Total number of warnings              : 9
+
+The program is definitely UNSAFE
+
+# Results
+integer/direct_access.f90: In function 'MAIN_':
+integer/direct_access.f90:17:1: error: pointer arithmetic overflow
+   write (iu,rec=irec) xmat(irec,:) ! record number irec
+^
+integer/direct_access.f90: In function 'MAIN_':
+integer/direct_access.f90:17:1: error: buffer overflow, pointer '&((float*)(&((int8_t*)(&tmp$r_386))[-4]))[{L.LB1_400: 1, L.LB1_403: (...) + 1}]' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of local variable 'tmp$r_386' of size 8 bytes
+   write (iu,rec=irec) xmat(irec,:) ! record number irec
+^
+integer/direct_access.f90: In function 'MAIN_':
+integer/direct_access.f90:24:1: error: pointer arithmetic overflow
+print fmt_g,xmat(nrec,:),xlast ! verify it was read correctly
+^
+integer/direct_access.f90: In function 'MAIN_':
+integer/direct_access.f90:24:1: error: pointer arithmetic overflow
+print fmt_g,xmat(nrec,:),xlast ! verify it was read correctly
+^
+integer/direct_access.f90: In function 'MAIN_':
+integer/direct_access.f90:24:1: error: buffer overflow, pointer '(float*)(&((int8_t*)(&.BSS1))[-4][({L.LB1_479: 1, L.LB1_406: (...) + 1}) * 4000000])' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of global variable '.BSS1' of size 8000008 bytes
+print fmt_g,xmat(nrec,:),xlast ! verify it was read correctly
+^
+integer/direct_access.f90: In function 'MAIN_':
+integer/direct_access.f90:24:1: error: buffer overflow, pointer '&((float*)(&((int8_t*)(&tmp$r_386))[-4]))[{L.LB1_479: 1, L.LB1_406: (...) + 1}]' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of local variable 'tmp$r_386' of size 8 bytes
+print fmt_g,xmat(nrec,:),xlast ! verify it was read correctly
+^
+integer/direct_access.f90: In function 'MAIN_':
+integer/direct_access.f90:17:1: warning: variable 'irec_335' might be uninitialized
+   write (iu,rec=irec) xmat(irec,:) ! record number irec
+^
+integer/direct_access.f90: In function 'MAIN_':
+integer/direct_access.f90:17:1: warning: pointer arithmetic might overflow
+   write (iu,rec=irec) xmat(irec,:) ! record number irec
+^
+integer/direct_access.f90: In function 'MAIN_':
+integer/direct_access.f90:17:1: warning: pointer arithmetic might overflow
+   write (iu,rec=irec) xmat(irec,:) ! record number irec
+^
+integer/direct_access.f90: In function 'MAIN_':
+integer/direct_access.f90:17:1: warning: pointer arithmetic might overflow
+   write (iu,rec=irec) xmat(irec,:) ! record number irec
+^
+integer/direct_access.f90: In function 'MAIN_':
+integer/direct_access.f90:17:1: warning: possible buffer overflow, pointer '&((float*)(&((int8_t*)(&.BSS1))[-4000004]))[((int64_t)irec_335) + (({L.LB1_400: 1, L.LB1_403: (...) + 1}) * 1000000)]' accesses 4 bytes of global variable '.BSS1' of size 8000008 bytes
+   write (iu,rec=irec) xmat(irec,:) ! record number irec
+^
+integer/direct_access.f90: In function 'MAIN_':
+integer/direct_access.f90:18:1: warning: variable 'irec_335' might be uninitialized
+end do
+^
+integer/direct_access.f90: In function 'MAIN_':
+integer/direct_access.f90:18:1: warning: possible signed integer underflow
+end do
+^
+integer/direct_access.f90: In function 'MAIN_':
+integer/direct_access.f90:24:1: warning: pointer arithmetic might overflow
+print fmt_g,xmat(nrec,:),xlast ! verify it was read correctly
+^
+integer/direct_access.f90: In function 'MAIN_':
+integer/direct_access.f90:24:1: warning: pointer arithmetic might overflow
+print fmt_g,xmat(nrec,:),xlast ! verify it was read correctly
+^

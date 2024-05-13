@@ -1,0 +1,27 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 1.994 sec
+ikos-pp      : 0.008 sec
+
+# Summary:
+Total number of checks                : 162
+Total number of unreachable checks    : 0
+Total number of safe checks           : 161
+Total number of definite unsafe checks: 0
+Total number of warnings              : 1
+
+The program is potentially UNSAFE
+
+# Results
+integer/boz.f90: In function 'MAIN_':
+integer/boz.f90:10:1: warning: expression 'transfer$r_361' might be uninitialized
+print fmt,transfer(real(Z'1F'),0) ! 31
+^

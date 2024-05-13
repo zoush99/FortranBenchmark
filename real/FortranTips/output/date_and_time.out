@@ -1,0 +1,47 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 9.057 sec
+ikos-pp      : 0.005 sec
+
+# Summary:
+Total number of checks                : 175
+Total number of unreachable checks    : 0
+Total number of safe checks           : 169
+Total number of definite unsafe checks: 2
+Total number of warnings              : 4
+
+The program is definitely UNSAFE
+
+# Results
+integer/date_and_time.f90: In function 'MAIN_':
+integer/date_and_time.f90:13:1: error: pointer arithmetic overflow
+write (*,"(/,i4.4,2('-',i2.2),1x,i2.2,2(':',i2.2))") ival([1,2,3,5,6,7])
+^
+integer/date_and_time.f90: In function 'MAIN_':
+integer/date_and_time.f90:13:1: error: buffer overflow, pointer '&((int32_t*)(&((int8_t*)(&.STATICS1))[-4]))[(int64_t)({L.LB1_388: 1, L.LB1_378: (...) + 1})]' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of global variable '.STATICS1' of size 24 bytes
+write (*,"(/,i4.4,2('-',i2.2),1x,i2.2,2(':',i2.2))") ival([1,2,3,5,6,7])
+^
+integer/date_and_time.f90: In function 'MAIN_':
+integer/date_and_time.f90:13:1: warning: pointer arithmetic might overflow
+write (*,"(/,i4.4,2('-',i2.2),1x,i2.2,2(':',i2.2))") ival([1,2,3,5,6,7])
+^
+integer/date_and_time.f90: In function 'MAIN_':
+integer/date_and_time.f90:13:1: warning: pointer arithmetic might overflow
+write (*,"(/,i4.4,2('-',i2.2),1x,i2.2,2(':',i2.2))") ival([1,2,3,5,6,7])
+^
+integer/date_and_time.f90: In function 'MAIN_':
+integer/date_and_time.f90:13:1: warning: pointer arithmetic might overflow
+write (*,"(/,i4.4,2('-',i2.2),1x,i2.2,2(':',i2.2))") ival([1,2,3,5,6,7])
+^
+integer/date_and_time.f90: In function 'MAIN_':
+integer/date_and_time.f90:13:1: warning: possible buffer overflow, pointer '&((int32_t*)(&((int8_t*)(&.BSS1))[-4]))[(int64_t)(((int32_t*)(&((int8_t*)(&.STATICS1))[-4]))[(int64_t)({L.LB1_388: 1, L.LB1_378: (...) + 1})])]' accesses 4 bytes of global variable '.BSS1' of size 32 bytes
+write (*,"(/,i4.4,2('-',i2.2),1x,i2.2,2(':',i2.2))") ival([1,2,3,5,6,7])
+^

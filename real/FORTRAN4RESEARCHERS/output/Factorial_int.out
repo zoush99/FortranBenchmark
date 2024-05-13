@@ -1,0 +1,51 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 5.890 sec
+ikos-pp      : 0.005 sec
+
+# Summary:
+Total number of checks                : 61
+Total number of unreachable checks    : 4
+Total number of safe checks           : 54
+Total number of definite unsafe checks: 0
+Total number of warnings              : 3
+
+The program is potentially UNSAFE
+
+# Results
+FORTRAN4RESEARCHERS/Factorial_int.f90: In function 'MAIN_':
+FORTRAN4RESEARCHERS/Factorial_int.f90:29:1: warning: divisor might be zero (-2147483615 <= divisor <= 30)
+    IF(factorial .GT. HUGE(factorial)/i) THEN
+^
+FORTRAN4RESEARCHERS/Factorial_int.f90: In function 'MAIN_':
+FORTRAN4RESEARCHERS/Factorial_int.f90:33:1: warning: possible signed integer underflow (-2147483616 <= left <= 30)
+    factorial = factorial * i
+^
+FORTRAN4RESEARCHERS/Factorial_int.f90: In function 'MAIN_':
+FORTRAN4RESEARCHERS/Factorial_int.f90:33:1: warning: possible signed integer overflow (-2147483616 <= left <= 30)
+    factorial = factorial * i
+^
+FORTRAN4RESEARCHERS/Factorial_int.f90: In function 'MAIN_':
+FORTRAN4RESEARCHERS/Factorial_int.f90:18:1: unreachable: code is dead
+    PRINT*, "Sequence is too short or long. max_val should be between 1 and 30"
+^
+FORTRAN4RESEARCHERS/Factorial_int.f90: In function 'MAIN_':
+FORTRAN4RESEARCHERS/Factorial_int.f90:18:1: unreachable: code is dead
+    PRINT*, "Sequence is too short or long. max_val should be between 1 and 30"
+^
+FORTRAN4RESEARCHERS/Factorial_int.f90: In function 'MAIN_':
+FORTRAN4RESEARCHERS/Factorial_int.f90:18:1: unreachable: code is dead
+    PRINT*, "Sequence is too short or long. max_val should be between 1 and 30"
+^
+FORTRAN4RESEARCHERS/Factorial_int.f90: In function 'MAIN_':
+FORTRAN4RESEARCHERS/Factorial_int.f90:18:1: unreachable: code is dead
+    PRINT*, "Sequence is too short or long. max_val should be between 1 and 30"
+^

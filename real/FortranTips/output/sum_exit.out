@@ -1,0 +1,43 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 0.169 sec
+ikos-pp      : 0.011 sec
+
+# Summary:
+Total number of checks                : 31
+Total number of unreachable checks    : 0
+Total number of safe checks           : 26
+Total number of definite unsafe checks: 0
+Total number of warnings              : 5
+
+The program is potentially UNSAFE
+
+# Results
+integer/sum_exit.f90: In function 'MAIN_':
+integer/sum_exit.f90:8:1: warning: possible signed integer overflow (left >= -2147483647)
+   i = i+1
+^
+integer/sum_exit.f90: In function 'MAIN_':
+integer/sum_exit.f90:9:1: warning: possible signed integer underflow (left >= -2147483646, right >= -2147483646)
+   ssq = ssq + i**2
+^
+integer/sum_exit.f90: In function 'MAIN_':
+integer/sum_exit.f90:9:1: warning: possible signed integer underflow (right <= 100)
+   ssq = ssq + i**2
+^
+integer/sum_exit.f90: In function 'MAIN_':
+integer/sum_exit.f90:9:1: warning: possible signed integer overflow (left >= -2147483646, right >= -2147483646)
+   ssq = ssq + i**2
+^
+integer/sum_exit.f90: In function 'MAIN_':
+integer/sum_exit.f90:9:1: warning: possible signed integer overflow (right <= 100)
+   ssq = ssq + i**2
+^

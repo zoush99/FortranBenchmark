@@ -1,0 +1,55 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 0.914 sec
+ikos-pp      : 0.006 sec
+
+# Summary:
+Total number of checks                : 133
+Total number of unreachable checks    : 0
+Total number of safe checks           : 125
+Total number of definite unsafe checks: 0
+Total number of warnings              : 8
+
+The program is potentially UNSAFE
+
+# Results
+integer/bounds.f90: In function 'MAIN_':
+integer/bounds.f90:9:1: warning: possible signed integer underflow
+print*,sum(v) ! 2
+^
+integer/bounds.f90: In function 'MAIN_':
+integer/bounds.f90:9:1: warning: possible signed integer overflow
+print*,sum(v) ! 2
+^
+integer/bounds.f90: In function 'MAIN_':
+integer/bounds.f90:10:1: warning: possible signed integer underflow
+print*,sum(v,mask=v>0) ! 4 -- sum excludes -2
+^
+integer/bounds.f90: In function 'MAIN_':
+integer/bounds.f90:10:1: warning: possible signed integer overflow
+print*,sum(v,mask=v>0) ! 4 -- sum excludes -2
+^
+integer/bounds.f90: In function 'MAIN_':
+integer/bounds.f90:10:1: warning: pointer arithmetic might overflow
+print*,sum(v,mask=v>0) ! 4 -- sum excludes -2
+^
+integer/bounds.f90: In function 'MAIN_':
+integer/bounds.f90:10:1: warning: pointer arithmetic might overflow
+print*,sum(v,mask=v>0) ! 4 -- sum excludes -2
+^
+integer/bounds.f90: In function 'MAIN_':
+integer/bounds.f90:10:1: warning: possible buffer overflow, pointer '&((int32_t*)(&((int8_t*)(&.STATICS1))[4]))[{L.LB1_403: -1, L.LB1_368: (...) + 1}]' accesses 4 bytes of global variable '.STATICS1' of size 12 bytes
+print*,sum(v,mask=v>0) ! 4 -- sum excludes -2
+^
+integer/bounds.f90: In function 'MAIN_':
+integer/bounds.f90:10:1: warning: possible buffer overflow, pointer '&((int32_t*)(&((int8_t*)(&.STATICS1))[4]))[{L.LB1_403: -1, L.LB1_368: (...) + 1}]' accesses 4 bytes of global variable '.STATICS1' of size 12 bytes
+print*,sum(v,mask=v>0) ! 4 -- sum excludes -2
+^

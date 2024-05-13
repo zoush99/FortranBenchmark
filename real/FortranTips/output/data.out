@@ -1,0 +1,43 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 0.089 sec
+ikos-pp      : 0.006 sec
+
+# Summary:
+Total number of checks                : 43
+Total number of unreachable checks    : 0
+Total number of safe checks           : 38
+Total number of definite unsafe checks: 0
+Total number of warnings              : 5
+
+The program is potentially UNSAFE
+
+# Results
+integer/data.f90: In function 'm_factorial_':
+integer/data.f90:11:1: warning: expression '*((int32_t*)(&.STATICS2))' might be uninitialized
+   i = i*j
+^
+integer/data.f90: In function 'm_factorial_':
+integer/data.f90:11:1: warning: possible signed integer underflow (2 <= left <= 3)
+   i = i*j
+^
+integer/data.f90: In function 'm_factorial_':
+integer/data.f90:11:1: warning: possible signed integer underflow (-2147483641 <= left <= 4)
+   i = i*j
+^
+integer/data.f90: In function 'm_factorial_':
+integer/data.f90:11:1: warning: possible signed integer overflow (2 <= left <= 3)
+   i = i*j
+^
+integer/data.f90: In function 'm_factorial_':
+integer/data.f90:11:1: warning: possible signed integer overflow (-2147483641 <= left <= 4)
+   i = i*j
+^

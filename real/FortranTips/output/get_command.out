@@ -1,0 +1,35 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 1.564 sec
+ikos-pp      : 0.005 sec
+
+# Summary:
+Total number of checks                : 104
+Total number of unreachable checks    : 0
+Total number of safe checks           : 101
+Total number of definite unsafe checks: 0
+Total number of warnings              : 3
+
+The program is potentially UNSAFE
+
+# Results
+integer/get_command.f90: In function 'MAIN_':
+integer/get_command.f90:17:1: warning: variable 'x_333' might be uninitialized
+   xsum = xsum + x
+^
+integer/get_command.f90: In function 'MAIN_':
+integer/get_command.f90:18:1: warning: variable 'i_331' might be uninitialized
+end do
+^
+integer/get_command.f90: In function 'MAIN_':
+integer/get_command.f90:18:1: warning: possible signed integer overflow
+end do
+^

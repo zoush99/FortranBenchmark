@@ -1,0 +1,27 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 0.122 sec
+ikos-pp      : 0.005 sec
+
+# Summary:
+Total number of checks                : 32
+Total number of unreachable checks    : 0
+Total number of safe checks           : 31
+Total number of definite unsafe checks: 0
+Total number of warnings              : 1
+
+The program is potentially UNSAFE
+
+# Results
+integer/case_insensitivity.f90: In function 'MAIN_':
+integer/case_insensitivity.f90:13:1: warning: expression '*((int32_t*)(&.STATICS1))' might be uninitialized
+    pRiNt *, ThIs_YeAr      ! >>> 2022
+^

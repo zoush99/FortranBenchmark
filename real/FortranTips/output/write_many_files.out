@@ -1,0 +1,83 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 9.276 sec
+ikos-pp      : 0.013 sec
+
+# Summary:
+Total number of checks                : 139
+Total number of unreachable checks    : 0
+Total number of safe checks           : 124
+Total number of definite unsafe checks: 10
+Total number of warnings              : 5
+
+The program is definitely UNSAFE
+
+# Results
+integer/write_many_files.f90: In function 'MAIN_':
+integer/write_many_files.f90:12:1: error: pointer arithmetic overflow
+   write (iu,*) minval(x),maxval(x),sum(x)/nobs   ! write data
+^
+integer/write_many_files.f90: In function 'MAIN_':
+integer/write_many_files.f90:12:1: error: pointer arithmetic overflow
+   write (iu,*) minval(x),maxval(x),sum(x)/nobs   ! write data
+^
+integer/write_many_files.f90: In function 'MAIN_':
+integer/write_many_files.f90:12:1: error: pointer arithmetic overflow
+   write (iu,*) minval(x),maxval(x),sum(x)/nobs   ! write data
+^
+integer/write_many_files.f90: In function 'MAIN_':
+integer/write_many_files.f90:12:1: error: pointer arithmetic overflow
+   write (iu,*) minval(x),maxval(x),sum(x)/nobs   ! write data
+^
+integer/write_many_files.f90: In function 'MAIN_':
+integer/write_many_files.f90:12:1: error: pointer arithmetic overflow
+   write (iu,*) minval(x),maxval(x),sum(x)/nobs   ! write data
+^
+integer/write_many_files.f90: In function 'MAIN_':
+integer/write_many_files.f90:12:1: error: buffer overflow, pointer '&((float*)(&((int8_t*)(&.BSS1))[-4]))[{L.LB1_384.AfterSelect: 1, L.LB1_390: (...) + 1}]' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of global variable '.BSS1' of size 4000 bytes
+   write (iu,*) minval(x),maxval(x),sum(x)/nobs   ! write data
+^
+integer/write_many_files.f90: In function 'MAIN_':
+integer/write_many_files.f90:12:1: error: buffer overflow, pointer '&((float*)(&((int8_t*)(&.BSS1))[-4]))[{L.LB1_384.AfterSelect: 1, L.LB1_390: (...) + 1}]' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of global variable '.BSS1' of size 4000 bytes
+   write (iu,*) minval(x),maxval(x),sum(x)/nobs   ! write data
+^
+integer/write_many_files.f90: In function 'MAIN_':
+integer/write_many_files.f90:12:1: error: buffer overflow, pointer '&((float*)(&((int8_t*)(&.BSS1))[-4]))[{L.LB1_448: 1, L.LB1_394: (...) + 1}]' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of global variable '.BSS1' of size 4000 bytes
+   write (iu,*) minval(x),maxval(x),sum(x)/nobs   ! write data
+^
+integer/write_many_files.f90: In function 'MAIN_':
+integer/write_many_files.f90:12:1: error: buffer overflow, pointer '&((float*)(&((int8_t*)(&.BSS1))[-4]))[{L.LB1_448: 1, L.LB1_394: (...) + 1}]' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of global variable '.BSS1' of size 4000 bytes
+   write (iu,*) minval(x),maxval(x),sum(x)/nobs   ! write data
+^
+integer/write_many_files.f90: In function 'MAIN_':
+integer/write_many_files.f90:12:1: error: buffer overflow, pointer '&((float*)(&((int8_t*)(&.BSS1))[-4]))[{L.LB1_450: 1, L.LB1_395: (...) + 1}]' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of global variable '.BSS1' of size 4000 bytes
+   write (iu,*) minval(x),maxval(x),sum(x)/nobs   ! write data
+^
+integer/write_many_files.f90: In function 'MAIN_':
+integer/write_many_files.f90:12:1: warning: pointer arithmetic might overflow
+   write (iu,*) minval(x),maxval(x),sum(x)/nobs   ! write data
+^
+integer/write_many_files.f90: In function 'MAIN_':
+integer/write_many_files.f90:12:1: warning: pointer arithmetic might overflow
+   write (iu,*) minval(x),maxval(x),sum(x)/nobs   ! write data
+^
+integer/write_many_files.f90: In function 'MAIN_':
+integer/write_many_files.f90:12:1: warning: pointer arithmetic might overflow
+   write (iu,*) minval(x),maxval(x),sum(x)/nobs   ! write data
+^
+integer/write_many_files.f90: In function 'MAIN_':
+integer/write_many_files.f90:12:1: warning: pointer arithmetic might overflow
+   write (iu,*) minval(x),maxval(x),sum(x)/nobs   ! write data
+^
+integer/write_many_files.f90: In function 'MAIN_':
+integer/write_many_files.f90:12:1: warning: pointer arithmetic might overflow
+   write (iu,*) minval(x),maxval(x),sum(x)/nobs   ! write data
+^

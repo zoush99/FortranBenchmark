@@ -1,0 +1,31 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 1.865 sec
+ikos-pp      : 0.005 sec
+
+# Summary:
+Total number of checks                : 146
+Total number of unreachable checks    : 0
+Total number of safe checks           : 144
+Total number of definite unsafe checks: 0
+Total number of warnings              : 2
+
+The program is potentially UNSAFE
+
+# Results
+integer/open_file.f90: In function 'MAIN_':
+integer/open_file.f90:15:1: warning: variable 'ierr_333' might be uninitialized
+if (ierr == 0) then
+^
+integer/open_file.f90: In function 'MAIN_':
+integer/open_file.f90:15:1: warning: variable 'ierr_333' might be uninitialized
+if (ierr == 0) then
+^

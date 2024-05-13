@@ -1,0 +1,35 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 4.446 sec
+ikos-pp      : 0.012 sec
+
+# Summary:
+Total number of checks                : 166
+Total number of unreachable checks    : 0
+Total number of safe checks           : 163
+Total number of definite unsafe checks: 0
+Total number of warnings              : 3
+
+The program is potentially UNSAFE
+
+# Results
+integer/internal_read_write.f90: In function 'MAIN_':
+integer/internal_read_write.f90:9:1: warning: variable 'ios_331' might be uninitialized
+if (ios /= 0) then
+^
+integer/internal_read_write.f90: In function 'MAIN_':
+integer/internal_read_write.f90:9:1: warning: variable 'ios_331' might be uninitialized
+if (ios /= 0) then
+^
+integer/internal_read_write.f90: In function 'MAIN_':
+integer/internal_read_write.f90:13:1: warning: variable 'value_330' might be uninitialized
+   write(*,*) "value = ",value
+^

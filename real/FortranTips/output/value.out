@@ -1,0 +1,39 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 0.262 sec
+ikos-pp      : 0.005 sec
+
+# Summary:
+Total number of checks                : 89
+Total number of unreachable checks    : 0
+Total number of safe checks           : 85
+Total number of definite unsafe checks: 0
+Total number of warnings              : 4
+
+The program is potentially UNSAFE
+
+# Results
+integer/value.f90: In function 'factorial_mod_factorial_':
+integer/value.f90:16:1: warning: possible signed integer underflow (left >= 2)
+   fac = fac * n
+^
+integer/value.f90: In function 'factorial_mod_factorial_':
+integer/value.f90:16:1: warning: possible signed integer overflow (left >= 2)
+   fac = fac * n
+^
+integer/value.f90: In function 'factorial_mod_factorial_impure_':
+integer/value.f90:32:1: warning: possible signed integer underflow (left >= 2)
+   fac = fac * n
+^
+integer/value.f90: In function 'factorial_mod_factorial_impure_':
+integer/value.f90:32:1: warning: possible signed integer overflow (left >= 2)
+   fac = fac * n
+^

@@ -1,0 +1,31 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 1.347 sec
+ikos-pp      : 0.011 sec
+
+# Summary:
+Total number of checks                : 105
+Total number of unreachable checks    : 0
+Total number of safe checks           : 103
+Total number of definite unsafe checks: 0
+Total number of warnings              : 2
+
+The program is potentially UNSAFE
+
+# Results
+FORTRAN4RESEARCHERS/TempConverter.f90: In function 'MAIN_':
+FORTRAN4RESEARCHERS/TempConverter.f90:30:1: warning: variable 'input_temp_329' might be uninitialized
+    output_temp = (input_temp - factor_sub)*factor
+^
+FORTRAN4RESEARCHERS/TempConverter.f90: In function 'MAIN_':
+FORTRAN4RESEARCHERS/TempConverter.f90:33:1: warning: variable 'input_temp_329' might be uninitialized
+    output_temp = input_temp/factor + factor_sub
+^

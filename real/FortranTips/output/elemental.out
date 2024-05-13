@@ -1,0 +1,27 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 2.160 sec
+ikos-pp      : 0.005 sec
+
+# Summary:
+Total number of checks                : 205
+Total number of unreachable checks    : 0
+Total number of safe checks           : 172
+Total number of definite unsafe checks: 2
+Total number of warnings              : 31
+
+The program is definitely UNSAFE
+
+# Results
+Report is too big (> 15 entries)
+
+Use `ikos-report output.db` to examine the report in your terminal.
+Use `ikos-view output.db` to examine the report in a web interface.

@@ -1,0 +1,43 @@
+[*] Running ikos preprocessor
+[*] Running ikos analyzer
+[*] Translating LLVM bitcode to AR
+[*] Running liveness analysis
+[*] Running widening hint analysis
+[*] Running interprocedural value analysis
+[*] Analyzing entry point 'MAIN_'
+[*] Checking properties for entry point 'MAIN_'
+
+# Time stats:
+ikos-analyzer: 1.726 sec
+ikos-pp      : 0.005 sec
+
+# Summary:
+Total number of checks                : 77
+Total number of unreachable checks    : 0
+Total number of safe checks           : 72
+Total number of definite unsafe checks: 3
+Total number of warnings              : 2
+
+The program is definitely UNSAFE
+
+# Results
+integer/derived_type_implied_do.f90: In function 'MAIN_':
+integer/derived_type_implied_do.f90:17:1: error: pointer arithmetic overflow
+print fmt,(t(i)%c,i=1,size(t)) ! 2 4 2 4
+^
+integer/derived_type_implied_do.f90: In function 'MAIN_':
+integer/derived_type_implied_do.f90:18:1: error: pointer arithmetic overflow
+print fmt,((t(i)%c(j),i=1,size(t)),j=1,size_c) ! 2 2 4 4
+^
+integer/derived_type_implied_do.f90: In function 'MAIN_':
+integer/derived_type_implied_do.f90:18:1: error: buffer overflow, pointer '(int32_t*)(&((int8_t*)(&.STATICS2))[-16][(((int64_t)({L.LB2_369: 1, L.LB2_372: (...) + 1})) * 12) + (((int64_t)({L.LB2_414: 1, L.LB2_415: (...) + 1})) * 4)])' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of global variable '.STATICS2' of size 24 bytes
+print fmt,((t(i)%c(j),i=1,size(t)),j=1,size_c) ! 2 2 4 4
+^
+integer/derived_type_implied_do.f90: In function 'MAIN_':
+integer/derived_type_implied_do.f90:17:1: warning: pointer arithmetic might overflow
+print fmt,(t(i)%c,i=1,size(t)) ! 2 4 2 4
+^
+integer/derived_type_implied_do.f90: In function 'MAIN_':
+integer/derived_type_implied_do.f90:18:1: warning: pointer arithmetic might overflow
+print fmt,((t(i)%c(j),i=1,size(t)),j=1,size_c) ! 2 2 4 4
+^
