@@ -8,8 +8,8 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 0.074 sec
-ikos-pp      : 0.011 sec
+ikos-analyzer: 0.069 sec
+ikos-pp      : 0.006 sec
 
 # Summary:
 Total number of checks                : 31
@@ -21,7 +21,7 @@ Total number of warnings              : 1
 The program is potentially UNSAFE
 
 # Results
-smack/inout_fail.f90: In function 'MAIN_':
-smack/inout_fail.f90:14:1: warning: possible signed integer overflow
+inout_fail.f90: In function 'MAIN_':
+inout_fail.f90:14:1: warning: possible signed integer overflow
   y = x + 5
 ^

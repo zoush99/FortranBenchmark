@@ -8,7 +8,7 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 4.955 sec
+ikos-analyzer: 4.492 sec
 ikos-pp      : 0.005 sec
 
 # Summary:
@@ -21,19 +21,19 @@ Total number of warnings              : 2
 The program is definitely UNSAFE
 
 # Results
-integer/xrandom_int.f90: In function 'MAIN_':
-integer/xrandom_int.f90:9:1: error: pointer arithmetic overflow
+xrandom_int.f90: In function 'MAIN_':
+xrandom_int.f90:9:1: error: pointer arithmetic overflow
 iran = 1 + imax*xran     ! transform uniform deviates to random integers from 1 to imax
 ^
-integer/xrandom_int.f90: In function 'MAIN_':
-integer/xrandom_int.f90:9:1: error: buffer overflow, pointer '&((float*)(&((int8_t*)(&.BSS1))[-4]))[{L.LB1_405: 1, L.LB1_383: (...) + 1}]' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of global variable '.BSS1' of size 8000000 bytes
+xrandom_int.f90: In function 'MAIN_':
+xrandom_int.f90:9:1: error: buffer overflow, pointer '&((float*)(&((int8_t*)(&.BSS1))[-4]))[{L.LB1_405: 1, L.LB1_383: (...) + 1}]' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of global variable '.BSS1' of size 8000000 bytes
 iran = 1 + imax*xran     ! transform uniform deviates to random integers from 1 to imax
 ^
-integer/xrandom_int.f90: In function 'MAIN_':
-integer/xrandom_int.f90:9:1: warning: expression '(int32_t)(((((float*)(&((int8_t*)(&.BSS1))[-4]))[{L.LB1_405: 1, L.LB1_383: (...) + 1}]) * (5.0E+0)) + (1.0E+0))' might be uninitialized
+xrandom_int.f90: In function 'MAIN_':
+xrandom_int.f90:9:1: warning: expression '(int32_t)(((((float*)(&((int8_t*)(&.BSS1))[-4]))[{L.LB1_405: 1, L.LB1_383: (...) + 1}]) * (5.0E+0)) + (1.0E+0))' might be uninitialized
 iran = 1 + imax*xran     ! transform uniform deviates to random integers from 1 to imax
 ^
-integer/xrandom_int.f90: In function 'MAIN_':
-integer/xrandom_int.f90:9:1: warning: pointer arithmetic might overflow
+xrandom_int.f90: In function 'MAIN_':
+xrandom_int.f90:9:1: warning: pointer arithmetic might overflow
 iran = 1 + imax*xran     ! transform uniform deviates to random integers from 1 to imax
 ^

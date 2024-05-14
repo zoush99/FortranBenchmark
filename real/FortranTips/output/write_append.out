@@ -8,8 +8,8 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 7.138 sec
-ikos-pp      : 0.006 sec
+ikos-analyzer: 7.100 sec
+ikos-pp      : 0.010 sec
 
 # Summary:
 Total number of checks                : 208
@@ -21,11 +21,11 @@ Total number of warnings              : 2
 The program is potentially UNSAFE
 
 # Results
-integer/write_append.f90: In function 'MAIN_':
-integer/write_append.f90:26:1: warning: variable 'stat_336' might be uninitialized
+write_append.f90: In function 'MAIN_':
+write_append.f90:26:1: warning: variable 'stat_336' might be uninitialized
    if (stat == 0) close (iu,status="delete") ! delete file
 ^
-integer/write_append.f90: In function 'MAIN_':
-integer/write_append.f90:26:1: warning: variable 'stat_336' might be uninitialized
+write_append.f90: In function 'MAIN_':
+write_append.f90:26:1: warning: variable 'stat_336' might be uninitialized
    if (stat == 0) close (iu,status="delete") ! delete file
 ^

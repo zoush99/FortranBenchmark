@@ -8,7 +8,7 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 1.303 sec
+ikos-analyzer: 1.174 sec
 ikos-pp      : 0.005 sec
 
 # Summary:
@@ -21,27 +21,27 @@ Total number of warnings              : 4
 The program is definitely UNSAFE
 
 # Results
-integer/scratch.f90: In function 'MAIN_':
-integer/scratch.f90:15:1: error: pointer arithmetic overflow
+scratch.f90: In function 'MAIN_':
+scratch.f90:15:1: error: pointer arithmetic overflow
 print*,isq([1,n]) ! 10 6250
 ^
-integer/scratch.f90: In function 'MAIN_':
-integer/scratch.f90:15:1: error: buffer overflow, pointer '&((int32_t*)(&((int8_t*)(&.STATICS1))[-4]))[(int64_t)({L.LB1_432.AfterSelect.AfterSelect.AfterSelect: 1, L.LB1_382: (...) + 1})]' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of global variable '.STATICS1' of size 8 bytes
+scratch.f90: In function 'MAIN_':
+scratch.f90:15:1: error: buffer overflow, pointer '&((int32_t*)(&((int8_t*)(&.STATICS1))[-4]))[(int64_t)({L.LB1_431.AfterSelect.AfterSelect.AfterSelect: 1, L.LB1_382: (...) + 1})]' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of global variable '.STATICS1' of size 8 bytes
 print*,isq([1,n]) ! 10 6250
 ^
-integer/scratch.f90: In function 'MAIN_':
-integer/scratch.f90:15:1: warning: pointer arithmetic might overflow
+scratch.f90: In function 'MAIN_':
+scratch.f90:15:1: warning: pointer arithmetic might overflow
 print*,isq([1,n]) ! 10 6250
 ^
-integer/scratch.f90: In function 'MAIN_':
-integer/scratch.f90:15:1: warning: pointer arithmetic might overflow
+scratch.f90: In function 'MAIN_':
+scratch.f90:15:1: warning: pointer arithmetic might overflow
 print*,isq([1,n]) ! 10 6250
 ^
-integer/scratch.f90: In function 'MAIN_':
-integer/scratch.f90:15:1: warning: pointer arithmetic might overflow
+scratch.f90: In function 'MAIN_':
+scratch.f90:15:1: warning: pointer arithmetic might overflow
 print*,isq([1,n]) ! 10 6250
 ^
-integer/scratch.f90: In function 'MAIN_':
-integer/scratch.f90:15:1: warning: possible buffer overflow, pointer '&((int32_t*)(&((int8_t*)(&.BSS1))[-4]))[(int64_t)(((int32_t*)(&((int8_t*)(&.STATICS1))[-4]))[(int64_t)({L.LB1_432.AfterSelect.AfterSelect.AfterSelect: 1, L.LB1_382: (...) + 1})])]' accesses 4 bytes of global variable '.BSS1' of size 100 bytes
+scratch.f90: In function 'MAIN_':
+scratch.f90:15:1: warning: possible buffer overflow, pointer '&((int32_t*)(&((int8_t*)(&.BSS1))[-4]))[(int64_t)(((int32_t*)(&((int8_t*)(&.STATICS1))[-4]))[(int64_t)({L.LB1_431.AfterSelect.AfterSelect.AfterSelect: 1, L.LB1_382: (...) + 1})])]' accesses 4 bytes of global variable '.BSS1' of size 100 bytes
 print*,isq([1,n]) ! 10 6250
 ^

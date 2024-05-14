@@ -1,5 +1,6 @@
 ./function.f90,43
-./palindrome.f,127
+./combination.f,97
+./palindrome.f,51
 ./example.f90,7
 ./differentiation.f,39
 ./bubblesort.f,62

@@ -8,8 +8,8 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 0.361 sec
-ikos-pp      : 0.008 sec
+ikos-analyzer: 0.253 sec
+ikos-pp      : 0.005 sec
 
 # Summary:
 Total number of checks                : 45
@@ -21,23 +21,23 @@ Total number of warnings              : 5
 The program is potentially UNSAFE
 
 # Results
-integer/loop_index.f90: In function 'MAIN_':
-integer/loop_index.f90:6:1: warning: possible signed integer underflow
+loop_index.f90: In function 'MAIN_':
+loop_index.f90:6:1: warning: possible signed integer underflow
    print*,i,i**2
 ^
-integer/loop_index.f90: In function 'MAIN_':
-integer/loop_index.f90:6:1: warning: possible signed integer overflow
+loop_index.f90: In function 'MAIN_':
+loop_index.f90:6:1: warning: possible signed integer overflow
    print*,i,i**2
 ^
-integer/loop_index.f90: In function 'MAIN_':
-integer/loop_index.f90:7:1: warning: possible signed integer overflow
+loop_index.f90: In function 'MAIN_':
+loop_index.f90:7:1: warning: possible signed integer overflow
 end do
 ^
-integer/loop_index.f90: In function 'loop_index_sub':
-integer/loop_index.f90:13:1: warning: possible signed integer underflow (left >= -2147483647)
+loop_index.f90: In function 'loop_index_sub':
+loop_index.f90:13:1: warning: possible signed integer underflow (left >= -2147483647)
 i = 2*i
 ^
-integer/loop_index.f90: In function 'loop_index_sub':
-integer/loop_index.f90:13:1: warning: possible signed integer overflow (left >= -2147483647)
+loop_index.f90: In function 'loop_index_sub':
+loop_index.f90:13:1: warning: possible signed integer overflow (left >= -2147483647)
 i = 2*i
 ^

@@ -8,8 +8,8 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 1.865 sec
-ikos-pp      : 0.005 sec
+ikos-analyzer: 1.826 sec
+ikos-pp      : 0.010 sec
 
 # Summary:
 Total number of checks                : 146
@@ -21,11 +21,11 @@ Total number of warnings              : 2
 The program is potentially UNSAFE
 
 # Results
-integer/open_file.f90: In function 'MAIN_':
-integer/open_file.f90:15:1: warning: variable 'ierr_333' might be uninitialized
+open_file.f90: In function 'MAIN_':
+open_file.f90:15:1: warning: variable 'ierr_333' might be uninitialized
 if (ierr == 0) then
 ^
-integer/open_file.f90: In function 'MAIN_':
-integer/open_file.f90:15:1: warning: variable 'ierr_333' might be uninitialized
+open_file.f90: In function 'MAIN_':
+open_file.f90:15:1: warning: variable 'ierr_333' might be uninitialized
 if (ierr == 0) then
 ^

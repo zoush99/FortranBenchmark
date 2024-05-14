@@ -8,8 +8,8 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 0.182 sec
-ikos-pp      : 0.009 sec
+ikos-analyzer: 0.157 sec
+ikos-pp      : 0.005 sec
 
 # Summary:
 Total number of checks                : 35
@@ -21,7 +21,7 @@ Total number of warnings              : 1
 The program is potentially UNSAFE
 
 # Results
-integer/error_stop.f90: In function 'm_sqrt_int_':
-integer/error_stop.f90:9:1: warning: expression '(float)(*((int32_t*)__arg0))' might be uninitialized
+error_stop.f90: In function 'm_sqrt_int_':
+error_stop.f90:9:1: warning: expression '(float)(*((int32_t*)__arg0))' might be uninitialized
 y = sqrt(real(i))
 ^

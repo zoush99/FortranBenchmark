@@ -8,8 +8,8 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 1.994 sec
-ikos-pp      : 0.008 sec
+ikos-analyzer: 1.720 sec
+ikos-pp      : 0.012 sec
 
 # Summary:
 Total number of checks                : 162
@@ -21,7 +21,7 @@ Total number of warnings              : 1
 The program is potentially UNSAFE
 
 # Results
-integer/boz.f90: In function 'MAIN_':
-integer/boz.f90:10:1: warning: expression 'transfer$r_361' might be uninitialized
+boz.f90: In function 'MAIN_':
+boz.f90:10:1: warning: expression 'transfer$r_361' might be uninitialized
 print fmt,transfer(real(Z'1F'),0) ! 31
 ^

@@ -8,8 +8,8 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 0.022 sec
-ikos-pp      : 0.010 sec
+ikos-analyzer: 0.019 sec
+ikos-pp      : 0.005 sec
 
 # Summary:
 Total number of checks                : 11
@@ -21,19 +21,19 @@ Total number of warnings              : 0
 The program is SAFE
 
 # Results
-smack/hello.f90: In function 'MAIN_':
-smack/hello.f90:11:1: unreachable: code is dead
+hello.f90: In function 'MAIN_':
+hello.f90:11:1: unreachable: code is dead
   if(.not.(a)) write(*,*) "asssert error" ! unreachable
 ^
-smack/hello.f90: In function 'MAIN_':
-smack/hello.f90:11:1: unreachable: code is dead
+hello.f90: In function 'MAIN_':
+hello.f90:11:1: unreachable: code is dead
   if(.not.(a)) write(*,*) "asssert error" ! unreachable
 ^
-smack/hello.f90: In function 'MAIN_':
-smack/hello.f90:11:1: unreachable: code is dead
+hello.f90: In function 'MAIN_':
+hello.f90:11:1: unreachable: code is dead
   if(.not.(a)) write(*,*) "asssert error" ! unreachable
 ^
-smack/hello.f90: In function 'MAIN_':
-smack/hello.f90:11:1: unreachable: code is dead
+hello.f90: In function 'MAIN_':
+hello.f90:11:1: unreachable: code is dead
   if(.not.(a)) write(*,*) "asssert error" ! unreachable
 ^

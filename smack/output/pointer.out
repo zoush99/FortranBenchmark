@@ -8,8 +8,8 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 0.050 sec
-ikos-pp      : 0.005 sec
+ikos-analyzer: 0.043 sec
+ikos-pp      : 0.006 sec
 
 # Summary:
 Total number of checks                : 23
@@ -21,19 +21,19 @@ Total number of warnings              : 0
 The program is SAFE
 
 # Results
-smack/pointer.f90: In function 'MAIN_':
-smack/pointer.f90:13:1: unreachable: code is dead
+pointer.f90: In function 'MAIN_':
+pointer.f90:13:1: unreachable: code is dead
   if (.not.(x == y)) write(*,*) "assert error"  ! unreachable
 ^
-smack/pointer.f90: In function 'MAIN_':
-smack/pointer.f90:13:1: unreachable: code is dead
+pointer.f90: In function 'MAIN_':
+pointer.f90:13:1: unreachable: code is dead
   if (.not.(x == y)) write(*,*) "assert error"  ! unreachable
 ^
-smack/pointer.f90: In function 'MAIN_':
-smack/pointer.f90:13:1: unreachable: code is dead
+pointer.f90: In function 'MAIN_':
+pointer.f90:13:1: unreachable: code is dead
   if (.not.(x == y)) write(*,*) "assert error"  ! unreachable
 ^
-smack/pointer.f90: In function 'MAIN_':
-smack/pointer.f90:13:1: unreachable: code is dead
+pointer.f90: In function 'MAIN_':
+pointer.f90:13:1: unreachable: code is dead
   if (.not.(x == y)) write(*,*) "assert error"  ! unreachable
 ^

@@ -8,8 +8,8 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 0.202 sec
-ikos-pp      : 0.009 sec
+ikos-analyzer: 0.185 sec
+ikos-pp      : 0.005 sec
 
 # Summary:
 Total number of checks                : 37
@@ -21,19 +21,19 @@ Total number of warnings              : 0
 The program is SAFE
 
 # Results
-smack/compound_fail_2.f90: In function 'MAIN_':
-smack/compound_fail_2.f90:17:1: unreachable: code is dead
+compound_fail_2.f90: In function 'MAIN_':
+compound_fail_2.f90:17:1: unreachable: code is dead
   if (.not.(p%x == 2)) write(*,*) "assert error" ! unreachable
 ^
-smack/compound_fail_2.f90: In function 'MAIN_':
-smack/compound_fail_2.f90:17:1: unreachable: code is dead
+compound_fail_2.f90: In function 'MAIN_':
+compound_fail_2.f90:17:1: unreachable: code is dead
   if (.not.(p%x == 2)) write(*,*) "assert error" ! unreachable
 ^
-smack/compound_fail_2.f90: In function 'MAIN_':
-smack/compound_fail_2.f90:17:1: unreachable: code is dead
+compound_fail_2.f90: In function 'MAIN_':
+compound_fail_2.f90:17:1: unreachable: code is dead
   if (.not.(p%x == 2)) write(*,*) "assert error" ! unreachable
 ^
-smack/compound_fail_2.f90: In function 'MAIN_':
-smack/compound_fail_2.f90:17:1: unreachable: code is dead
+compound_fail_2.f90: In function 'MAIN_':
+compound_fail_2.f90:17:1: unreachable: code is dead
   if (.not.(p%x == 2)) write(*,*) "assert error" ! unreachable
 ^

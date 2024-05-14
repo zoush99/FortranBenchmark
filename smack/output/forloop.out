@@ -8,8 +8,8 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 0.056 sec
-ikos-pp      : 0.010 sec
+ikos-analyzer: 0.054 sec
+ikos-pp      : 0.007 sec
 
 # Summary:
 Total number of checks                : 21
@@ -21,19 +21,19 @@ Total number of warnings              : 0
 The program is SAFE
 
 # Results
-smack/forloop.f90: In function 'MAIN_':
-smack/forloop.f90:14:1: unreachable: code is dead
+forloop.f90: In function 'MAIN_':
+forloop.f90:14:1: unreachable: code is dead
   if (.not.(x == 50)) write(*,*) "assert error"  ! unreachable
 ^
-smack/forloop.f90: In function 'MAIN_':
-smack/forloop.f90:14:1: unreachable: code is dead
+forloop.f90: In function 'MAIN_':
+forloop.f90:14:1: unreachable: code is dead
   if (.not.(x == 50)) write(*,*) "assert error"  ! unreachable
 ^
-smack/forloop.f90: In function 'MAIN_':
-smack/forloop.f90:14:1: unreachable: code is dead
+forloop.f90: In function 'MAIN_':
+forloop.f90:14:1: unreachable: code is dead
   if (.not.(x == 50)) write(*,*) "assert error"  ! unreachable
 ^
-smack/forloop.f90: In function 'MAIN_':
-smack/forloop.f90:14:1: unreachable: code is dead
+forloop.f90: In function 'MAIN_':
+forloop.f90:14:1: unreachable: code is dead
   if (.not.(x == 50)) write(*,*) "assert error"  ! unreachable
 ^

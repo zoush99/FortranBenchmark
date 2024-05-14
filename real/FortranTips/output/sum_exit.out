@@ -8,8 +8,8 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 0.169 sec
-ikos-pp      : 0.011 sec
+ikos-analyzer: 0.128 sec
+ikos-pp      : 0.005 sec
 
 # Summary:
 Total number of checks                : 31
@@ -21,23 +21,23 @@ Total number of warnings              : 5
 The program is potentially UNSAFE
 
 # Results
-integer/sum_exit.f90: In function 'MAIN_':
-integer/sum_exit.f90:8:1: warning: possible signed integer overflow (left >= -2147483647)
+sum_exit.f90: In function 'MAIN_':
+sum_exit.f90:8:1: warning: possible signed integer overflow (left >= -2147483647)
    i = i+1
 ^
-integer/sum_exit.f90: In function 'MAIN_':
-integer/sum_exit.f90:9:1: warning: possible signed integer underflow (left >= -2147483646, right >= -2147483646)
+sum_exit.f90: In function 'MAIN_':
+sum_exit.f90:9:1: warning: possible signed integer underflow (left >= -2147483646, right >= -2147483646)
    ssq = ssq + i**2
 ^
-integer/sum_exit.f90: In function 'MAIN_':
-integer/sum_exit.f90:9:1: warning: possible signed integer underflow (right <= 100)
+sum_exit.f90: In function 'MAIN_':
+sum_exit.f90:9:1: warning: possible signed integer underflow (right <= 100)
    ssq = ssq + i**2
 ^
-integer/sum_exit.f90: In function 'MAIN_':
-integer/sum_exit.f90:9:1: warning: possible signed integer overflow (left >= -2147483646, right >= -2147483646)
+sum_exit.f90: In function 'MAIN_':
+sum_exit.f90:9:1: warning: possible signed integer overflow (left >= -2147483646, right >= -2147483646)
    ssq = ssq + i**2
 ^
-integer/sum_exit.f90: In function 'MAIN_':
-integer/sum_exit.f90:9:1: warning: possible signed integer overflow (right <= 100)
+sum_exit.f90: In function 'MAIN_':
+sum_exit.f90:9:1: warning: possible signed integer overflow (right <= 100)
    ssq = ssq + i**2
 ^

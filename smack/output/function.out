@@ -8,8 +8,8 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 0.081 sec
-ikos-pp      : 0.009 sec
+ikos-analyzer: 0.066 sec
+ikos-pp      : 0.005 sec
 
 # Summary:
 Total number of checks                : 36
@@ -21,51 +21,51 @@ Total number of warnings              : 0
 The program is SAFE
 
 # Results
-smack/function.f90: In function 'MAIN_':
-smack/function.f90:29:1: unreachable: code is dead
+function.f90: In function 'MAIN_':
+function.f90:29:1: unreachable: code is dead
   if (.not.(cap(2) == 2)) write(*,*) "assert error"  ! unreachable
 ^
-smack/function.f90: In function 'MAIN_':
-smack/function.f90:29:1: unreachable: code is dead
+function.f90: In function 'MAIN_':
+function.f90:29:1: unreachable: code is dead
   if (.not.(cap(2) == 2)) write(*,*) "assert error"  ! unreachable
 ^
-smack/function.f90: In function 'MAIN_':
-smack/function.f90:29:1: unreachable: code is dead
+function.f90: In function 'MAIN_':
+function.f90:29:1: unreachable: code is dead
   if (.not.(cap(2) == 2)) write(*,*) "assert error"  ! unreachable
 ^
-smack/function.f90: In function 'MAIN_':
-smack/function.f90:29:1: unreachable: code is dead
+function.f90: In function 'MAIN_':
+function.f90:29:1: unreachable: code is dead
   if (.not.(cap(2) == 2)) write(*,*) "assert error"  ! unreachable
 ^
-smack/function.f90: In function 'MAIN_':
-smack/function.f90:30:1: unreachable: code is dead
+function.f90: In function 'MAIN_':
+function.f90:30:1: unreachable: code is dead
   if (.not.(cap(15) == 10)) write(*,*) "assert error"  ! unreachable
 ^
-smack/function.f90: In function 'MAIN_':
-smack/function.f90:30:1: unreachable: code is dead
+function.f90: In function 'MAIN_':
+function.f90:30:1: unreachable: code is dead
   if (.not.(cap(15) == 10)) write(*,*) "assert error"  ! unreachable
 ^
-smack/function.f90: In function 'MAIN_':
-smack/function.f90:30:1: unreachable: code is dead
+function.f90: In function 'MAIN_':
+function.f90:30:1: unreachable: code is dead
   if (.not.(cap(15) == 10)) write(*,*) "assert error"  ! unreachable
 ^
-smack/function.f90: In function 'MAIN_':
-smack/function.f90:30:1: unreachable: code is dead
+function.f90: In function 'MAIN_':
+function.f90:30:1: unreachable: code is dead
   if (.not.(cap(15) == 10)) write(*,*) "assert error"  ! unreachable
 ^
-smack/function.f90: In function 'MAIN_':
-smack/function.f90:34:1: unreachable: code is dead
+function.f90: In function 'MAIN_':
+function.f90:34:1: unreachable: code is dead
   if (.not.(cap(x) <= 10)) write(*,*) "assert error"  ! unreachable
 ^
-smack/function.f90: In function 'MAIN_':
-smack/function.f90:34:1: unreachable: code is dead
+function.f90: In function 'MAIN_':
+function.f90:34:1: unreachable: code is dead
   if (.not.(cap(x) <= 10)) write(*,*) "assert error"  ! unreachable
 ^
-smack/function.f90: In function 'MAIN_':
-smack/function.f90:34:1: unreachable: code is dead
+function.f90: In function 'MAIN_':
+function.f90:34:1: unreachable: code is dead
   if (.not.(cap(x) <= 10)) write(*,*) "assert error"  ! unreachable
 ^
-smack/function.f90: In function 'MAIN_':
-smack/function.f90:34:1: unreachable: code is dead
+function.f90: In function 'MAIN_':
+function.f90:34:1: unreachable: code is dead
   if (.not.(cap(x) <= 10)) write(*,*) "assert error"  ! unreachable
 ^

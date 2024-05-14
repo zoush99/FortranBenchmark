@@ -8,8 +8,8 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 0.198 sec
-ikos-pp      : 0.005 sec
+ikos-analyzer: 0.203 sec
+ikos-pp      : 0.013 sec
 
 # Summary:
 Total number of checks                : 84
@@ -21,35 +21,35 @@ Total number of warnings              : 8
 The program is potentially UNSAFE
 
 # Results
-smack/fib_fail.f90: In function 'fib_':
-smack/fib_fail.f90:9:1: warning: expression '*((int32_t*)__arg0)' might be uninitialized
+fib_fail.f90: In function 'fib_':
+fib_fail.f90:9:1: warning: expression '*((int32_t*)__arg0)' might be uninitialized
 if (n <= 0) then
 ^
-smack/fib_fail.f90: In function 'fib_':
-smack/fib_fail.f90:9:1: warning: expression '*((int32_t*)__arg0)' might be uninitialized
+fib_fail.f90: In function 'fib_':
+fib_fail.f90:9:1: warning: expression '*((int32_t*)__arg0)' might be uninitialized
 if (n <= 0) then
 ^
-smack/fib_fail.f90: In function 'fib_':
-smack/fib_fail.f90:11:1: warning: expression '*((int32_t*)__arg0)' might be uninitialized
+fib_fail.f90: In function 'fib_':
+fib_fail.f90:11:1: warning: expression '*((int32_t*)__arg0)' might be uninitialized
 else if (n == 1) then
 ^
-smack/fib_fail.f90: In function 'fib_':
-smack/fib_fail.f90:11:1: warning: expression '*((int32_t*)__arg0)' might be uninitialized
+fib_fail.f90: In function 'fib_':
+fib_fail.f90:11:1: warning: expression '*((int32_t*)__arg0)' might be uninitialized
 else if (n == 1) then
 ^
-smack/fib_fail.f90: In function 'fib_':
-smack/fib_fail.f90:14:1: warning: expression '*((int32_t*)__arg0)' might be uninitialized
+fib_fail.f90: In function 'fib_':
+fib_fail.f90:14:1: warning: expression '*((int32_t*)__arg0)' might be uninitialized
   result_fib = fib(n - 1) + fib(n - 2)
 ^
-smack/fib_fail.f90: In function 'fib_':
-smack/fib_fail.f90:14:1: warning: expression '*((int32_t*)__arg0)' might be uninitialized
+fib_fail.f90: In function 'fib_':
+fib_fail.f90:14:1: warning: expression '*((int32_t*)__arg0)' might be uninitialized
   result_fib = fib(n - 1) + fib(n - 2)
 ^
-smack/fib_fail.f90: In function 'fib_':
-smack/fib_fail.f90:14:1: warning: possible signed integer underflow
+fib_fail.f90: In function 'fib_':
+fib_fail.f90:14:1: warning: possible signed integer underflow
   result_fib = fib(n - 1) + fib(n - 2)
 ^
-smack/fib_fail.f90: In function 'fib_':
-smack/fib_fail.f90:14:1: warning: possible signed integer overflow
+fib_fail.f90: In function 'fib_':
+fib_fail.f90:14:1: warning: possible signed integer overflow
   result_fib = fib(n - 1) + fib(n - 2)
 ^

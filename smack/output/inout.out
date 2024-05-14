@@ -8,8 +8,8 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 0.041 sec
-ikos-pp      : 0.010 sec
+ikos-analyzer: 0.034 sec
+ikos-pp      : 0.005 sec
 
 # Summary:
 Total number of checks                : 22
@@ -21,23 +21,23 @@ Total number of warnings              : 1
 The program is potentially UNSAFE
 
 # Results
-smack/inout.f90: In function 'MAIN_':
-smack/inout.f90:14:1: warning: possible signed integer overflow
+inout.f90: In function 'MAIN_':
+inout.f90:14:1: warning: possible signed integer overflow
   y = x + 5
 ^
-smack/inout.f90: In function 'MAIN_':
-smack/inout.f90:18:1: unreachable: code is dead
+inout.f90: In function 'MAIN_':
+inout.f90:18:1: unreachable: code is dead
   if (.not.(x == y)) write(*,*) "assert error"  ! unreachable
 ^
-smack/inout.f90: In function 'MAIN_':
-smack/inout.f90:18:1: unreachable: code is dead
+inout.f90: In function 'MAIN_':
+inout.f90:18:1: unreachable: code is dead
   if (.not.(x == y)) write(*,*) "assert error"  ! unreachable
 ^
-smack/inout.f90: In function 'MAIN_':
-smack/inout.f90:18:1: unreachable: code is dead
+inout.f90: In function 'MAIN_':
+inout.f90:18:1: unreachable: code is dead
   if (.not.(x == y)) write(*,*) "assert error"  ! unreachable
 ^
-smack/inout.f90: In function 'MAIN_':
-smack/inout.f90:18:1: unreachable: code is dead
+inout.f90: In function 'MAIN_':
+inout.f90:18:1: unreachable: code is dead
   if (.not.(x == y)) write(*,*) "assert error"  ! unreachable
 ^

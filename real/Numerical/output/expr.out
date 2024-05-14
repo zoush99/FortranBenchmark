@@ -8,7 +8,7 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 0.031 sec
+ikos-analyzer: 0.027 sec
 ikos-pp      : 0.006 sec
 
 # Summary:

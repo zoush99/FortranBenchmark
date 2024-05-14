@@ -8,8 +8,8 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 0.089 sec
-ikos-pp      : 0.006 sec
+ikos-analyzer: 0.081 sec
+ikos-pp      : 0.005 sec
 
 # Summary:
 Total number of checks                : 43
@@ -21,23 +21,23 @@ Total number of warnings              : 5
 The program is potentially UNSAFE
 
 # Results
-integer/data.f90: In function 'm_factorial_':
-integer/data.f90:11:1: warning: expression '*((int32_t*)(&.STATICS2))' might be uninitialized
+data.f90: In function 'm_factorial_':
+data.f90:11:1: warning: expression '*((int32_t*)(&.STATICS2))' might be uninitialized
    i = i*j
 ^
-integer/data.f90: In function 'm_factorial_':
-integer/data.f90:11:1: warning: possible signed integer underflow (2 <= left <= 3)
+data.f90: In function 'm_factorial_':
+data.f90:11:1: warning: possible signed integer underflow (2 <= left <= 3)
    i = i*j
 ^
-integer/data.f90: In function 'm_factorial_':
-integer/data.f90:11:1: warning: possible signed integer underflow (-2147483641 <= left <= 4)
+data.f90: In function 'm_factorial_':
+data.f90:11:1: warning: possible signed integer underflow (-2147483641 <= left <= 4)
    i = i*j
 ^
-integer/data.f90: In function 'm_factorial_':
-integer/data.f90:11:1: warning: possible signed integer overflow (2 <= left <= 3)
+data.f90: In function 'm_factorial_':
+data.f90:11:1: warning: possible signed integer overflow (2 <= left <= 3)
    i = i*j
 ^
-integer/data.f90: In function 'm_factorial_':
-integer/data.f90:11:1: warning: possible signed integer overflow (-2147483641 <= left <= 4)
+data.f90: In function 'm_factorial_':
+data.f90:11:1: warning: possible signed integer overflow (-2147483641 <= left <= 4)
    i = i*j
 ^

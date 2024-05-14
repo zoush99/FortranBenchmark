@@ -8,7 +8,7 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 4.706 sec
+ikos-analyzer: 4.346 sec
 ikos-pp      : 0.005 sec
 
 # Summary:
@@ -21,63 +21,63 @@ Total number of warnings              : 5
 The program is definitely UNSAFE
 
 # Results
-integer/loop_label.f90: In function 'MAIN_':
-integer/loop_label.f90:7:1: error: pointer arithmetic overflow
+loop_label.f90: In function 'MAIN_':
+loop_label.f90:7:1: error: pointer arithmetic overflow
 x = x - 0.1
 ^
-integer/loop_label.f90: In function 'MAIN_':
-integer/loop_label.f90:7:1: error: pointer arithmetic overflow
+loop_label.f90: In function 'MAIN_':
+loop_label.f90:7:1: error: pointer arithmetic overflow
 x = x - 0.1
 ^
-integer/loop_label.f90: In function 'MAIN_':
-integer/loop_label.f90:7:1: error: buffer overflow, pointer '&((float*)(&((int8_t*)(&.BSS1))[-24]))[({L.LB1_384: 1, L.LB1_387: (...) + 1}) + (({L.LB1_412: 1, L.LB1_460: (...) + 1}) * 5)]' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of global variable '.BSS1' of size 100 bytes
+loop_label.f90: In function 'MAIN_':
+loop_label.f90:7:1: error: buffer overflow, pointer '&((float*)(&((int8_t*)(&.BSS1))[-24]))[({L.LB1_384: 1, L.LB1_387: (...) + 1}) + (({L.LB1_412: 1, L.LB1_460: (...) + 1}) * 5)]' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of global variable '.BSS1' of size 100 bytes
 x = x - 0.1
 ^
-integer/loop_label.f90: In function 'MAIN_':
-integer/loop_label.f90:7:1: error: buffer overflow, pointer '&((float*)(&((int8_t*)(&.BSS1))[-24]))[({L.LB1_384: 1, L.LB1_387: (...) + 1}) + (({L.LB1_412: 1, L.LB1_460: (...) + 1}) * 5)]' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of global variable '.BSS1' of size 100 bytes
+loop_label.f90: In function 'MAIN_':
+loop_label.f90:7:1: error: buffer overflow, pointer '&((float*)(&((int8_t*)(&.BSS1))[-24]))[({L.LB1_384: 1, L.LB1_387: (...) + 1}) + (({L.LB1_412: 1, L.LB1_460: (...) + 1}) * 5)]' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of global variable '.BSS1' of size 100 bytes
 x = x - 0.1
 ^
-integer/loop_label.f90: In function 'MAIN_':
-integer/loop_label.f90:14:1: error: pointer arithmetic overflow
+loop_label.f90: In function 'MAIN_':
+loop_label.f90:14:1: error: pointer arithmetic overflow
       if (x(i,j) < 0.0) then
 ^
-integer/loop_label.f90: In function 'MAIN_':
-integer/loop_label.f90:14:1: error: buffer overflow, pointer '&((float*)(&((int8_t*)(&.BSS1))[-24]))[((int64_t)({L.LB1_461: 1, L.LB1_463: (...) + 1})) + (((int64_t)({L.LB1_390: 1, L.LB1_396: (...) + 1})) * 5)]' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of global variable '.BSS1' of size 100 bytes
+loop_label.f90: In function 'MAIN_':
+loop_label.f90:14:1: error: buffer overflow, pointer '&((float*)(&((int8_t*)(&.BSS1))[-24]))[((int64_t)({L.LB1_461: 1, L.LB1_463: (...) + 1})) + (((int64_t)({L.LB1_390: 1, L.LB1_396: (...) + 1})) * 5)]' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of global variable '.BSS1' of size 100 bytes
       if (x(i,j) < 0.0) then
 ^
-integer/loop_label.f90: In function 'MAIN_':
-integer/loop_label.f90:24:1: error: pointer arithmetic overflow
+loop_label.f90: In function 'MAIN_':
+loop_label.f90:24:1: error: pointer arithmetic overflow
    print "(*(1x,f5.2))", x(i,:)
 ^
-integer/loop_label.f90: In function 'MAIN_':
-integer/loop_label.f90:24:1: error: pointer arithmetic overflow
+loop_label.f90: In function 'MAIN_':
+loop_label.f90:24:1: error: pointer arithmetic overflow
    print "(*(1x,f5.2))", x(i,:)
 ^
-integer/loop_label.f90: In function 'MAIN_':
-integer/loop_label.f90:24:1: error: buffer overflow, pointer '&((float*)(&((int8_t*)(&.BSS1))[-24]))[((int64_t)({L.LB1_340: 1, L.LB1_464: (...) + 1})) + (({L.LB1_397: 1, L.LB1_400: (...) + 1}) * 5)]' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of global variable '.BSS1' of size 100 bytes
+loop_label.f90: In function 'MAIN_':
+loop_label.f90:24:1: error: buffer overflow, pointer '&((float*)(&((int8_t*)(&.BSS1))[-24]))[((int64_t)({L.LB1_340: 1, L.LB1_464: (...) + 1})) + (({L.LB1_397: 1, L.LB1_400: (...) + 1}) * 5)]' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of global variable '.BSS1' of size 100 bytes
    print "(*(1x,f5.2))", x(i,:)
 ^
-integer/loop_label.f90: In function 'MAIN_':
-integer/loop_label.f90:24:1: error: buffer overflow, pointer '&((float*)(&((int8_t*)(&tmp$r_369))[-4]))[{L.LB1_397: 1, L.LB1_400: (...) + 1}]' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of local variable 'tmp$r_369' of size 20 bytes
+loop_label.f90: In function 'MAIN_':
+loop_label.f90:24:1: error: buffer overflow, pointer '&((float*)(&((int8_t*)(&tmp$r_369))[-4]))[{L.LB1_397: 1, L.LB1_400: (...) + 1}]' accesses 4 bytes at offset between 9223372036854775807 and -9223372036854775808 bytes of local variable 'tmp$r_369' of size 20 bytes
    print "(*(1x,f5.2))", x(i,:)
 ^
-integer/loop_label.f90: In function 'MAIN_':
-integer/loop_label.f90:7:1: warning: pointer arithmetic might overflow
+loop_label.f90: In function 'MAIN_':
+loop_label.f90:7:1: warning: pointer arithmetic might overflow
 x = x - 0.1
 ^
-integer/loop_label.f90: In function 'MAIN_':
-integer/loop_label.f90:7:1: warning: pointer arithmetic might overflow
+loop_label.f90: In function 'MAIN_':
+loop_label.f90:7:1: warning: pointer arithmetic might overflow
 x = x - 0.1
 ^
-integer/loop_label.f90: In function 'MAIN_':
-integer/loop_label.f90:14:1: warning: pointer arithmetic might overflow
+loop_label.f90: In function 'MAIN_':
+loop_label.f90:14:1: warning: pointer arithmetic might overflow
       if (x(i,j) < 0.0) then
 ^
-integer/loop_label.f90: In function 'MAIN_':
-integer/loop_label.f90:24:1: warning: pointer arithmetic might overflow
+loop_label.f90: In function 'MAIN_':
+loop_label.f90:24:1: warning: pointer arithmetic might overflow
    print "(*(1x,f5.2))", x(i,:)
 ^
-integer/loop_label.f90: In function 'MAIN_':
-integer/loop_label.f90:24:1: warning: pointer arithmetic might overflow
+loop_label.f90: In function 'MAIN_':
+loop_label.f90:24:1: warning: pointer arithmetic might overflow
    print "(*(1x,f5.2))", x(i,:)
 ^

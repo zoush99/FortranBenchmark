@@ -8,8 +8,8 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 0.117 sec
-ikos-pp      : 0.009 sec
+ikos-analyzer: 0.103 sec
+ikos-pp      : 0.005 sec
 
 # Summary:
 Total number of checks                : 28
@@ -21,35 +21,35 @@ Total number of warnings              : 0
 The program is SAFE
 
 # Results
-smack/compound.f90: In function 'MAIN_':
-smack/compound.f90:17:1: unreachable: code is dead
+compound.f90: In function 'MAIN_':
+compound.f90:17:1: unreachable: code is dead
   if (.not.(p%x == 2)) write(*,*) "assert error" ! unreachable
 ^
-smack/compound.f90: In function 'MAIN_':
-smack/compound.f90:17:1: unreachable: code is dead
+compound.f90: In function 'MAIN_':
+compound.f90:17:1: unreachable: code is dead
   if (.not.(p%x == 2)) write(*,*) "assert error" ! unreachable
 ^
-smack/compound.f90: In function 'MAIN_':
-smack/compound.f90:17:1: unreachable: code is dead
+compound.f90: In function 'MAIN_':
+compound.f90:17:1: unreachable: code is dead
   if (.not.(p%x == 2)) write(*,*) "assert error" ! unreachable
 ^
-smack/compound.f90: In function 'MAIN_':
-smack/compound.f90:17:1: unreachable: code is dead
+compound.f90: In function 'MAIN_':
+compound.f90:17:1: unreachable: code is dead
   if (.not.(p%x == 2)) write(*,*) "assert error" ! unreachable
 ^
-smack/compound.f90: In function 'MAIN_':
-smack/compound.f90:18:1: unreachable: code is dead
+compound.f90: In function 'MAIN_':
+compound.f90:18:1: unreachable: code is dead
   if (.not.(p%y == 3)) write(*,*) "assert error" ! unreachable
 ^
-smack/compound.f90: In function 'MAIN_':
-smack/compound.f90:18:1: unreachable: code is dead
+compound.f90: In function 'MAIN_':
+compound.f90:18:1: unreachable: code is dead
   if (.not.(p%y == 3)) write(*,*) "assert error" ! unreachable
 ^
-smack/compound.f90: In function 'MAIN_':
-smack/compound.f90:18:1: unreachable: code is dead
+compound.f90: In function 'MAIN_':
+compound.f90:18:1: unreachable: code is dead
   if (.not.(p%y == 3)) write(*,*) "assert error" ! unreachable
 ^
-smack/compound.f90: In function 'MAIN_':
-smack/compound.f90:18:1: unreachable: code is dead
+compound.f90: In function 'MAIN_':
+compound.f90:18:1: unreachable: code is dead
   if (.not.(p%y == 3)) write(*,*) "assert error" ! unreachable
 ^

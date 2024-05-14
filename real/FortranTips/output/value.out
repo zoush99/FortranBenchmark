@@ -8,8 +8,8 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 0.262 sec
-ikos-pp      : 0.005 sec
+ikos-analyzer: 0.286 sec
+ikos-pp      : 0.012 sec
 
 # Summary:
 Total number of checks                : 89
@@ -21,19 +21,19 @@ Total number of warnings              : 4
 The program is potentially UNSAFE
 
 # Results
-integer/value.f90: In function 'factorial_mod_factorial_':
-integer/value.f90:16:1: warning: possible signed integer underflow (left >= 2)
+value.f90: In function 'factorial_mod_factorial_':
+value.f90:16:1: warning: possible signed integer underflow (left >= 2)
    fac = fac * n
 ^
-integer/value.f90: In function 'factorial_mod_factorial_':
-integer/value.f90:16:1: warning: possible signed integer overflow (left >= 2)
+value.f90: In function 'factorial_mod_factorial_':
+value.f90:16:1: warning: possible signed integer overflow (left >= 2)
    fac = fac * n
 ^
-integer/value.f90: In function 'factorial_mod_factorial_impure_':
-integer/value.f90:32:1: warning: possible signed integer underflow (left >= 2)
+value.f90: In function 'factorial_mod_factorial_impure_':
+value.f90:32:1: warning: possible signed integer underflow (left >= 2)
    fac = fac * n
 ^
-integer/value.f90: In function 'factorial_mod_factorial_impure_':
-integer/value.f90:32:1: warning: possible signed integer overflow (left >= 2)
+value.f90: In function 'factorial_mod_factorial_impure_':
+value.f90:32:1: warning: possible signed integer overflow (left >= 2)
    fac = fac * n
 ^

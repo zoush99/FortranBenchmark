@@ -8,8 +8,8 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 0.028 sec
-ikos-pp      : 0.006 sec
+ikos-analyzer: 0.026 sec
+ikos-pp      : 0.009 sec
 
 # Summary:
 Total number of checks                : 11
@@ -21,19 +21,19 @@ Total number of warnings              : 0
 The program is SAFE
 
 # Results
-smack/compute.f90: In function 'MAIN_':
-smack/compute.f90:12:1: unreachable: code is dead
+compute.f90: In function 'MAIN_':
+compute.f90:12:1: unreachable: code is dead
   if (.not.(z == 30)) write(*,*) "assert error"  ! unreachable
 ^
-smack/compute.f90: In function 'MAIN_':
-smack/compute.f90:12:1: unreachable: code is dead
+compute.f90: In function 'MAIN_':
+compute.f90:12:1: unreachable: code is dead
   if (.not.(z == 30)) write(*,*) "assert error"  ! unreachable
 ^
-smack/compute.f90: In function 'MAIN_':
-smack/compute.f90:12:1: unreachable: code is dead
+compute.f90: In function 'MAIN_':
+compute.f90:12:1: unreachable: code is dead
   if (.not.(z == 30)) write(*,*) "assert error"  ! unreachable
 ^
-smack/compute.f90: In function 'MAIN_':
-smack/compute.f90:12:1: unreachable: code is dead
+compute.f90: In function 'MAIN_':
+compute.f90:12:1: unreachable: code is dead
   if (.not.(z == 30)) write(*,*) "assert error"  ! unreachable
 ^

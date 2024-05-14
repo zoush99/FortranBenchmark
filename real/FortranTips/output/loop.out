@@ -8,7 +8,7 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 0.096 sec
+ikos-analyzer: 0.077 sec
 ikos-pp      : 0.005 sec
 
 # Summary:
@@ -21,19 +21,19 @@ Total number of warnings              : 4
 The program is potentially UNSAFE
 
 # Results
-integer/loop.f90: In function 'MAIN_':
-integer/loop.f90:7:1: warning: possible signed integer underflow (-2147483640 <= left <= 5, -2147483640 <= right <= 5)
+loop.f90: In function 'MAIN_':
+loop.f90:7:1: warning: possible signed integer underflow (-2147483640 <= left <= 5, -2147483640 <= right <= 5)
    ssq = ssq + i**2
 ^
-integer/loop.f90: In function 'MAIN_':
-integer/loop.f90:7:1: warning: possible signed integer underflow
+loop.f90: In function 'MAIN_':
+loop.f90:7:1: warning: possible signed integer underflow
    ssq = ssq + i**2
 ^
-integer/loop.f90: In function 'MAIN_':
-integer/loop.f90:7:1: warning: possible signed integer overflow (-2147483640 <= left <= 5, -2147483640 <= right <= 5)
+loop.f90: In function 'MAIN_':
+loop.f90:7:1: warning: possible signed integer overflow (-2147483640 <= left <= 5, -2147483640 <= right <= 5)
    ssq = ssq + i**2
 ^
-integer/loop.f90: In function 'MAIN_':
-integer/loop.f90:7:1: warning: possible signed integer overflow
+loop.f90: In function 'MAIN_':
+loop.f90:7:1: warning: possible signed integer overflow
    ssq = ssq + i**2
 ^

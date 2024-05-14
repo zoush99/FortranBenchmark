@@ -8,8 +8,8 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 0.320 sec
-ikos-pp      : 0.006 sec
+ikos-analyzer: 0.288 sec
+ikos-pp      : 0.010 sec
 
 # Summary:
 Total number of checks                : 73
@@ -21,31 +21,31 @@ Total number of warnings              : 7
 The program is potentially UNSAFE
 
 # Results
-integer/implicit_save.f90: In function 'save_mod_bad_factorial_':
-integer/implicit_save.f90:19:1: warning: expression '*((int32_t*)(&.STATICS3))' might be uninitialized
+implicit_save.f90: In function 'save_mod_bad_factorial_':
+implicit_save.f90:19:1: warning: expression '*((int32_t*)(&.STATICS3))' might be uninitialized
    i = i*j
 ^
-integer/implicit_save.f90: In function 'save_mod_bad_factorial_':
-integer/implicit_save.f90:19:1: warning: possible signed integer underflow (2 <= left <= 3)
+implicit_save.f90: In function 'save_mod_bad_factorial_':
+implicit_save.f90:19:1: warning: possible signed integer underflow (2 <= left <= 3)
    i = i*j
 ^
-integer/implicit_save.f90: In function 'save_mod_bad_factorial_':
-integer/implicit_save.f90:19:1: warning: possible signed integer underflow (-2147483642 <= left <= 3)
+implicit_save.f90: In function 'save_mod_bad_factorial_':
+implicit_save.f90:19:1: warning: possible signed integer underflow (-2147483642 <= left <= 3)
    i = i*j
 ^
-integer/implicit_save.f90: In function 'save_mod_bad_factorial_':
-integer/implicit_save.f90:19:1: warning: possible signed integer overflow (2 <= left <= 3)
+implicit_save.f90: In function 'save_mod_bad_factorial_':
+implicit_save.f90:19:1: warning: possible signed integer overflow (2 <= left <= 3)
    i = i*j
 ^
-integer/implicit_save.f90: In function 'save_mod_bad_factorial_':
-integer/implicit_save.f90:19:1: warning: possible signed integer overflow (-2147483642 <= left <= 3)
+implicit_save.f90: In function 'save_mod_bad_factorial_':
+implicit_save.f90:19:1: warning: possible signed integer overflow (-2147483642 <= left <= 3)
    i = i*j
 ^
-integer/implicit_save.f90: In function 'save_mod_factorial_':
-integer/implicit_save.f90:30:1: warning: possible signed integer underflow (-2147483642 <= left <= 3)
+implicit_save.f90: In function 'save_mod_factorial_':
+implicit_save.f90:30:1: warning: possible signed integer underflow (-2147483642 <= left <= 3)
    i = i*j
 ^
-integer/implicit_save.f90: In function 'save_mod_factorial_':
-integer/implicit_save.f90:30:1: warning: possible signed integer overflow (-2147483642 <= left <= 3)
+implicit_save.f90: In function 'save_mod_factorial_':
+implicit_save.f90:30:1: warning: possible signed integer overflow (-2147483642 <= left <= 3)
    i = i*j
 ^

@@ -8,8 +8,8 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 14.690 sec
-ikos-pp      : 0.010 sec
+ikos-analyzer: 13.300 sec
+ikos-pp      : 0.005 sec
 
 # Summary:
 Total number of checks                : 190

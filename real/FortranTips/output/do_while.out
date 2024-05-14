@@ -8,7 +8,7 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 1.725 sec
+ikos-analyzer: 1.674 sec
 ikos-pp      : 0.005 sec
 
 # Summary:
@@ -21,51 +21,51 @@ Total number of warnings              : 12
 The program is potentially UNSAFE
 
 # Results
-integer/do_while.f90: In function 'MAIN_':
-integer/do_while.f90:5:1: warning: expression '*((int32_t*)(&.STATICS1))' might be uninitialized
+do_while.f90: In function 'MAIN_':
+do_while.f90:5:1: warning: expression '*((int32_t*)(&.STATICS1))' might be uninitialized
 do while (factorial <= 100)
 ^
-integer/do_while.f90: In function 'MAIN_':
-integer/do_while.f90:5:1: warning: expression '*((int32_t*)(&.STATICS1))' might be uninitialized
+do_while.f90: In function 'MAIN_':
+do_while.f90:5:1: warning: expression '*((int32_t*)(&.STATICS1))' might be uninitialized
 do while (factorial <= 100)
 ^
-integer/do_while.f90: In function 'MAIN_':
-integer/do_while.f90:7:1: warning: expression '*((int32_t*)(&((int8_t*)(&.STATICS1))[4]))' might be uninitialized
+do_while.f90: In function 'MAIN_':
+do_while.f90:7:1: warning: expression '*((int32_t*)(&((int8_t*)(&.STATICS1))[4]))' might be uninitialized
    print "(2i10)",i,factorial
 ^
-integer/do_while.f90: In function 'MAIN_':
-integer/do_while.f90:7:1: warning: expression '*((int32_t*)(&.STATICS1))' might be uninitialized
+do_while.f90: In function 'MAIN_':
+do_while.f90:7:1: warning: expression '*((int32_t*)(&.STATICS1))' might be uninitialized
    print "(2i10)",i,factorial
 ^
-integer/do_while.f90: In function 'MAIN_':
-integer/do_while.f90:8:1: warning: expression '*((int32_t*)(&((int8_t*)(&.STATICS1))[4]))' might be uninitialized
+do_while.f90: In function 'MAIN_':
+do_while.f90:8:1: warning: expression '*((int32_t*)(&((int8_t*)(&.STATICS1))[4]))' might be uninitialized
    i = i + 1
 ^
-integer/do_while.f90: In function 'MAIN_':
-integer/do_while.f90:8:1: warning: possible signed integer overflow
+do_while.f90: In function 'MAIN_':
+do_while.f90:8:1: warning: possible signed integer overflow
    i = i + 1
 ^
-integer/do_while.f90: In function 'MAIN_':
-integer/do_while.f90:9:1: warning: expression '*((int32_t*)(&.STATICS1))' might be uninitialized
+do_while.f90: In function 'MAIN_':
+do_while.f90:9:1: warning: expression '*((int32_t*)(&.STATICS1))' might be uninitialized
    factorial = factorial * i
 ^
-integer/do_while.f90: In function 'MAIN_':
-integer/do_while.f90:9:1: warning: possible signed integer underflow (left <= 100)
+do_while.f90: In function 'MAIN_':
+do_while.f90:9:1: warning: possible signed integer underflow (left <= 100)
    factorial = factorial * i
 ^
-integer/do_while.f90: In function 'MAIN_':
-integer/do_while.f90:9:1: warning: possible signed integer overflow (left <= 100)
+do_while.f90: In function 'MAIN_':
+do_while.f90:9:1: warning: possible signed integer overflow (left <= 100)
    factorial = factorial * i
 ^
-integer/do_while.f90: In function 'MAIN_':
-integer/do_while.f90:16:1: warning: possible signed integer overflow (left >= -2147483647)
+do_while.f90: In function 'MAIN_':
+do_while.f90:16:1: warning: possible signed integer overflow (left >= -2147483647)
    i = i + 1
 ^
-integer/do_while.f90: In function 'MAIN_':
-integer/do_while.f90:17:1: warning: possible signed integer underflow (left <= 100, right >= -2147483646)
+do_while.f90: In function 'MAIN_':
+do_while.f90:17:1: warning: possible signed integer underflow (left <= 100, right >= -2147483646)
    factorial = factorial * i
 ^
-integer/do_while.f90: In function 'MAIN_':
-integer/do_while.f90:17:1: warning: possible signed integer overflow (left <= 100, right >= -2147483646)
+do_while.f90: In function 'MAIN_':
+do_while.f90:17:1: warning: possible signed integer overflow (left <= 100, right >= -2147483646)
    factorial = factorial * i
 ^

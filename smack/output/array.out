@@ -8,8 +8,8 @@
 [*] Checking properties for entry point 'MAIN_'
 
 # Time stats:
-ikos-analyzer: 0.027 sec
-ikos-pp      : 0.009 sec
+ikos-analyzer: 0.022 sec
+ikos-pp      : 0.005 sec
 
 # Summary:
 Total number of checks                : 14
@@ -21,19 +21,19 @@ Total number of warnings              : 0
 The program is SAFE
 
 # Results
-smack/array.f90: In function 'MAIN_':
-smack/array.f90:10:1: unreachable: code is dead
+array.f90: In function 'MAIN_':
+array.f90:10:1: unreachable: code is dead
   if (.not.(array(1) == 3)) write(*,*) "assert error" ! unreachable
 ^
-smack/array.f90: In function 'MAIN_':
-smack/array.f90:10:1: unreachable: code is dead
+array.f90: In function 'MAIN_':
+array.f90:10:1: unreachable: code is dead
   if (.not.(array(1) == 3)) write(*,*) "assert error" ! unreachable
 ^
-smack/array.f90: In function 'MAIN_':
-smack/array.f90:10:1: unreachable: code is dead
+array.f90: In function 'MAIN_':
+array.f90:10:1: unreachable: code is dead
   if (.not.(array(1) == 3)) write(*,*) "assert error" ! unreachable
 ^
-smack/array.f90: In function 'MAIN_':
-smack/array.f90:10:1: unreachable: code is dead
+array.f90: In function 'MAIN_':
+array.f90:10:1: unreachable: code is dead
   if (.not.(array(1) == 3)) write(*,*) "assert error" ! unreachable
 ^
